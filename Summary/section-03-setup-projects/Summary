@@ -1,0 +1,109 @@
+AFTER THIS SECTION - CREATE GIT REPO!
+
+*NOTE:
+
+	I'm on Windows(like him) and set the Java to 16 in the Spring Boot Projects in STS!.. ... HE SET TO 15!
+
+Tasks List: 
+
+	1.Create the ShopifyProject  - Root Project:DONE	
+	
+	2. Create the ShopifyCommonProject : DONE
+	
+	3.Create the ShopifyWebParent project: DONE
+	
+	4.Create the ShopifyBackEnd: DONE
+	
+	5. Create the ShipfyFrontEnd project (Same...): DONE
+	
+	6. TEST: 2 projects run! and I can run mvn install in STS
+	
+	
+	
+***********************************************************************************************
+					1.Create the Root Project:DONE	
+************************************************************************************************
+
+	1.1 Create a maven project - packaging - pom 
+	
+	NOTE: This is not Spring Boot Project!
+
+	
+********************************************************************************************
+					2. Create the ShopifyCommonProject :DONE
+*****************************************************************************************
+NOTE: The parent of this project is Spring ! Not the ShopifyProject !
+
+	Even if this is a module of the ShopifyProject !
+
+	Overview:
+	
+		-This project holds the Entity Classes which are base on Spring Data JPA
+		
+	2.1 Create the Spring Boot Project - jar
+	
+	2.2 Uncheck the default location - and put it under the ShopifyProject/SopifyCommonProject
+	
+	2.3 Update the pom.xml: 
+	
+			-Add the DATA JPA 
+			
+			-Add the MySQL Driver
+			
+			-Add the Postres Driver
+			
+			-Remove the tests and the Spring Boot Maven Plugin
+			
+	2.4 Update the pom of the  Root Project - Set the ShopifyCommonProject as a Module
+
+	2.5 Remove the main class from this project(library project)
+	
+	2.6 Remove the entire package of the the tests
+	
+	
+	
+***************************************************************************************************
+			3.Create the ShopifyWebParent project:DONE 
+***********************************************************************************************	
+NOTE: The Property "Project Natures" Remove the java natures
+
+=> This will remove all the JRE and the Source packages !
+
+It converts the Spring Boot Starter project to a simple Maven project
+
+Overview: 
+
+	The purpouse of this project is to have the common dependencies between the FronetEnd and BackEnd
+	
+	
+3.1 Create the Spring Boot Starter ShopifyWebParent project with pom packaing
+
+3.2 Remove the Spring Boot Maven plugin
+
+3.3 KEEP The ALL the dependencies!
+
+3.4 Update the Root Project - add it to the modules
+
+3.5 Delete the Main class and the package of the tests
+
+*******************************************************************************************************
+					4.Create the ShopifyBackEnd
+*****************************************************************************************8
+
+	4.1 Create this Spring Boot Project and place it under the ShopifyWebParent projcet
+	
+	4.2 Update the ShopifyWebParent - add this project as a module
+	
+	4.3 Set the parent to the ShopifyWebParent project (instead of Spring Boot)
+	
+	4.4 Remove all dependencies( it inherits from the ShopifyWebParent)
+	
+	4.5 Keep the Spring Boot Maven plugin
+	
+	4.5 Remove the Test class(not the test package ) for now..
+	
+	4.6 Update the application.properties and the Enviroment Variables in Eclispe: 
+	
+		Set the port to ${PORT} 
+		
+		
