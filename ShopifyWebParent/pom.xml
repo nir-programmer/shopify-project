@@ -9,7 +9,7 @@
 		<version>2.5.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.shopify</groupId>
+	<groupId>org.nir.shopify</groupId>
 	<artifactId>ShopifyWebParent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
