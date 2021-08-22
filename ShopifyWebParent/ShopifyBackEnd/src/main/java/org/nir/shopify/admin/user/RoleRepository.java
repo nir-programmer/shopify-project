@@ -1,4 +1,4 @@
-package org.shopify.admin.user;
+package org.nir.shopify.admin.user;
 
 
 import org.nir.shopify.common.entity.Role;

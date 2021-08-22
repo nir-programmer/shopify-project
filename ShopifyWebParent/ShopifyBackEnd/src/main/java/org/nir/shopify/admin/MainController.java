@@ -1,4 +1,4 @@
-package org.shopify.admin;
+package org.nir.shopify.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
