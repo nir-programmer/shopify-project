@@ -1,7 +1,9 @@
 package org.nir.shopify.admin.user;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
+import org.nir.shopify.admin.UserNotFoundException;
 import org.nir.shopify.common.entity.Role;
 import org.nir.shopify.common.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,18 +33,52 @@ public class UserService {
 	}
 
 	public void save(User user) {
-		encodePassword(user);
+		boolean isUpdatingUser = (user.getId() != null);
+		
+		if (isUpdatingUser) {
+			User existingUser = userRepo.findById(user.getId()).get();
+			
+			if (user.getPassword().isEmpty()) {
+				user.setPassword(existingUser.getPassword());
+			} else {
+				encodePassword(user);
+			}
+			
+		} else {		
+			encodePassword(user);
+		}
+		
 		userRepo.save(user);
-	}
-	
-	public boolean isEmailUnique(String email) {
-		User userByEmail = userRepo.getUserByEmail(email);
-
-		return userByEmail == null;
 	}
 	
 	private void encodePassword(User user) {
 		String encodedPassword = passwordEncoder.encode(user.getPassword());
 		user.setPassword(encodedPassword);
+	}
+	
+	public boolean isEmailUnique(Integer id, String email) {
+		User userByEmail = userRepo.getUserByEmail(email);
+		
+		if (userByEmail == null) return true;
+		
+		boolean isCreatingNew = (id == null);
+		
+		if (isCreatingNew) {
+			if (userByEmail != null) return false;
+		} else {
+			if (userByEmail.getId() != id) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
+	public User get(Integer id) throws UserNotFoundException {
+		try {
+			return userRepo.findById(id).get();
+		} catch (NoSuchElementException ex) {
+			throw new UserNotFoundException("Could not find any user with ID " + id);
+		}
 	}
 }
