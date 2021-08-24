@@ -3,6 +3,8 @@ package org.nir.shopify.admin.user;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import javax.transaction.Transactional;
+
 import org.nir.shopify.admin.UserNotFoundException;
 import org.nir.shopify.common.entity.Role;
 import org.nir.shopify.common.entity.User;
