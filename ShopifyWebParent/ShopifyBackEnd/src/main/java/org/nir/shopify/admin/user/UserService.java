@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
+@Transactional
 public class UserService {
 
 	@Autowired
@@ -88,5 +89,9 @@ public class UserService {
 		}
 		
 		userRepo.deleteById(id);
+	}
+	
+	public void updateUserEnabledStatus(Integer id, boolean enabled) {
+		userRepo.updateEnabledStatus(id, enabled);
 	}
 }
