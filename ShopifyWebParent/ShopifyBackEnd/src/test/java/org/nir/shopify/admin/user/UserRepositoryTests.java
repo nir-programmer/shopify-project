@@ -110,11 +110,10 @@ public class UserRepositoryTests {
 
 	@Test
 	public void testEnableUser() {
-		Integer id = 3;
+		Integer id = 6;
 		repo.updateEnabledStatus(id, true);
 
 	}	
 }
 	
 	
-}
