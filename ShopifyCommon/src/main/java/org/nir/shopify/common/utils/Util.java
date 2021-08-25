@@ -1,5 +1,8 @@
 package org.nir.shopify.common.utils;
 
+import org.springframework.stereotype.Component;
+
+
 public class Util 
 	{
 	    // create enums for each operating system
