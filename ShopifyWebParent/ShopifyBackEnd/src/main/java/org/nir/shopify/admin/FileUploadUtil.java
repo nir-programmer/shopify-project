@@ -9,7 +9,8 @@ import java.nio.file.StandardCopyOption;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class FileUploadUtil {
+public class FileUploadUtil 
+{
 
 	public static void saveFile(String uploadDir, String fileName, 
 			MultipartFile multipartFile) throws IOException {
