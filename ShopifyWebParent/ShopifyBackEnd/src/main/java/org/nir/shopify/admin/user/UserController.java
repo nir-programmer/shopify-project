@@ -3,6 +3,8 @@ package org.nir.shopify.admin.user;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.repository.query.Param;
@@ -163,4 +165,5 @@ public class UserController {
 		UserCsvExporter exporter = new UserCsvExporter();
 		exporter.export(listUsers, response);
 	}
+	
 }
