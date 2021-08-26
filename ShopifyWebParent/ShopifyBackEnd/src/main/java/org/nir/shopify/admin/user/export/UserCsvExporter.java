@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.user;
+package org.nir.shopify.admin.user.export;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.nir.shopify.admin.user.AbstractExporter;
 import org.nir.shopify.common.entity.User;
 import org.supercsv.io.CsvBeanWriter;
 import org.supercsv.io.ICsvBeanWriter;

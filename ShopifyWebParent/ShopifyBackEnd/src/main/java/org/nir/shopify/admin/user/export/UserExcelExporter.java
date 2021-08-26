@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.user;
+package org.nir.shopify.admin.user.export;
 
 import java.io.IOException;
 import java.util.List;
@@ -13,6 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.nir.shopify.admin.user.AbstractExporter;
 import org.nir.shopify.common.entity.User;
 
 
