@@ -6,9 +6,13 @@
 <div class="container-fluid">
 	<div th:replace="navigation :: menu"></div>
 	<div>
-		<h1>Shopify Control Panel</h1>	
+		<h2>Shopify Control Panel</h2>	
+		Welcome 
+		<a th:href="@{/account}" 
+			sec:authentication="principal.fullname">
+		</a>
 	</div>
-
+	
 	<div th:replace="fragments :: footer"></div>
 	
 </div>
