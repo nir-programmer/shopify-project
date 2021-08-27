@@ -1,8 +1,9 @@
-package org.nir.shopify.admin.user;
+package org.nir.shopify.admin.user.controller;
 import java.io.IOException;
 
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.admin.security.ShopifyUserDetails;
+import org.nir.shopify.admin.user.UserService;
 import org.nir.shopify.common.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -28,7 +29,7 @@ public class AccountController {
 		User user = service.getByEmail(email);
 		model.addAttribute("user", user);
 		
-		return "account_form";
+		return "users/account_form";
 		
 	}
 	

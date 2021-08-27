@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.user;
+package org.nir.shopify.admin.user.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.admin.UserNotFoundException;
+import org.nir.shopify.admin.user.UserService;
 import org.nir.shopify.admin.user.export.UserCsvExporter;
 import org.nir.shopify.admin.user.export.UserExcelExporter;
 import org.nir.shopify.admin.user.export.UserPdfExporter;
@@ -68,7 +69,7 @@ public class UserController {
 		model.addAttribute("reverseSortDir", reverseSortDir);
 		model.addAttribute("keyword", keyword);
 		
-		return "users";		
+		return "users/users";		
 	}
 	
 	
@@ -83,7 +84,7 @@ public class UserController {
 		model.addAttribute("listRoles", listRoles);
 		model.addAttribute("pageTitle", "Create New User");
 		
-		return "user_form";
+		return "users/user_form";
 	}
 	
 	@PostMapping("/users/save")
@@ -124,12 +125,11 @@ public class UserController {
 			User user = service.get(id);
 			List<Role> listRoles = service.listRoles();
 			
-			
 			model.addAttribute("user", user);
 			model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
 			model.addAttribute("listRoles", listRoles);
 			
-			return "user_form";
+			return "users/user_form";
 		} catch (UserNotFoundException ex) {
 			redirectAttributes.addFlashAttribute("message", ex.getMessage());
 			return "redirect:/users";
@@ -169,11 +169,10 @@ public class UserController {
 		exporter.export(listUsers, response);
 	}
 	
-
 	@GetMapping("/users/export/excel")
 	public void exportToExcel(HttpServletResponse response) throws IOException {
 		List<User> listUsers = service.listAll();
-
+		
 		UserExcelExporter exporter = new UserExcelExporter();
 		exporter.export(listUsers, response);
 	}
@@ -181,9 +180,8 @@ public class UserController {
 	@GetMapping("/users/export/pdf")
 	public void exportToPDF(HttpServletResponse response) throws IOException {
 		List<User> listUsers = service.listAll();
-
+		
 		UserPdfExporter exporter = new UserPdfExporter();
 		exporter.export(listUsers, response);
 	}	
-	
 }

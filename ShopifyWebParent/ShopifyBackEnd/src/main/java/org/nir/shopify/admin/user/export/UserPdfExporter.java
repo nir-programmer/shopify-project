@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.nir.shopify.admin.user.AbstractExporter;
 import org.nir.shopify.common.entity.User;
 
 import com.lowagie.text.Document;
