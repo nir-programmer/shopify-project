@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.user;
+package org.nir.shopify.admin.user.export;
 
 import java.io.IOException;
 import java.text.DateFormat;
