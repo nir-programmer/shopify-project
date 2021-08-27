@@ -1,5 +1,6 @@
-package org.nir.shopify.admin.user;
+package org.nir.shopify.admin.user.controller;
 
+import org.nir.shopify.admin.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.user;
+package org.nir.shopify.admin.user.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.admin.UserNotFoundException;
+import org.nir.shopify.admin.user.UserService;
 import org.nir.shopify.admin.user.export.UserCsvExporter;
 import org.nir.shopify.admin.user.export.UserExcelExporter;
 import org.nir.shopify.admin.user.export.UserPdfExporter;
