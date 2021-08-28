@@ -80,6 +80,8 @@ public class Category {
 		return copyCategory;
 	}
 	
+	
+	//CONSTRUCTORS
 	public Category(String name) {
 		this.name = name;
 		this.alias = name;
@@ -90,6 +92,16 @@ public class Category {
 		this(name);
 		this.parent = parent;
 	}	
+	
+
+	public Category(Integer id, String name, String alias) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.alias = alias;
+	}
+	
+	//Getters/Setters
 
 	public Integer getId() {
 		return id;
