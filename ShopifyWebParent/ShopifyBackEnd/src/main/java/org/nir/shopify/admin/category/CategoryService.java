@@ -12,16 +12,22 @@ import javax.transaction.Transactional;
 
 import org.nir.shopify.common.entity.Category;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class CategoryService {
+public class CategoryService 
+{
+	
+	private static final int ROOT_CATEGORIES_PER_PAGE=4;
 	@Autowired
 	private CategoryRepository repo;
 	
-	public List<Category> listAll(String sortDir) {
+	public List<Category> listByPage(CategoryPageInfo pageInfo,  int pageNum, String sortDir) {
 		Sort sort = Sort.by("name");
 		
 		if (sortDir.equals("asc")) {
@@ -30,7 +36,15 @@ public class CategoryService {
 			sort = sort.descending();
 		}
 		
-		List<Category> rootCategories = repo.findRootCategories(sort);
+		Pageable pageable = PageRequest.of(pageNum - 1, ROOT_CATEGORIES_PER_PAGE, sort);
+		
+		Page<Category> pageCategories = repo.findRootCategories(pageable);
+		
+		List<Category> rootCategories = pageCategories.getContent();
+		
+		pageInfo.setTotalElements(pageCategories.getTotalElements());
+		pageInfo.setTotalPages(pageCategories.getTotalPages());
+		
 		
 		return listHierarchicalCategories(rootCategories, sortDir);
 	}
