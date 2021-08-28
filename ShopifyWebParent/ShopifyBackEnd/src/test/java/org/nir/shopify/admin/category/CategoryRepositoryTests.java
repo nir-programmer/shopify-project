@@ -2,6 +2,7 @@ package org.nir.shopify.admin.category;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
@@ -69,6 +70,14 @@ public class CategoryRepositoryTests {
 		}
 	}
 	
+
+	@Test
+	public void testListRootCategories() {
+		List<Category> rootCategories = repo.findRootCategories();
+		rootCategories.forEach(cat -> System.out.println(cat.getName()));
+	}
+
+	
 	private void printChildren(Category parent, int subLevel) {
 		int newSubLevel = subLevel + 1;
 		Set<Category> children = parent.getChildren();
@@ -83,4 +92,5 @@ public class CategoryRepositoryTests {
 			printChildren(subCategory, newSubLevel);
 		}		
 	}
+	
 }

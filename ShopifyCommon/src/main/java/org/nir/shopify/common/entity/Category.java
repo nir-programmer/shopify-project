@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "categories")
@@ -38,12 +39,18 @@ public class Category {
 	@OneToMany(mappedBy = "parent")
 	private Set<Category> children = new HashSet<>();
 
+	public Category() {
+	}
+	
+	public Category(Integer id) {
+		this.id = id;
+	}
 
 	public static Category copyIdAndName(Category category) {
 		Category copyCategory = new Category();
 		copyCategory.setId(category.getId());
 		copyCategory.setName(category.getName());
-
+		
 		return copyCategory;
 	}
 
@@ -51,30 +58,39 @@ public class Category {
 		Category copyCategory = new Category();
 		copyCategory.setId(id);
 		copyCategory.setName(name);
-
+		
 		return copyCategory;
 	}
 	
-
-	public Category() {
+	public static Category copyFull(Category category) {
+		Category copyCategory = new Category();
+		copyCategory.setId(category.getId());
+		copyCategory.setName(category.getName());
+		copyCategory.setImage(category.getImage());
+		copyCategory.setAlias(category.getAlias());
+		copyCategory.setEnabled(category.isEnabled());
+		
+		return copyCategory;		
 	}
-
-	public Category(Integer id) {
-		this.id = id;
+	
+	public static Category copyFull(Category category, String name) {
+		Category copyCategory = Category.copyFull(category);
+		copyCategory.setName(name);
+		
+		return copyCategory;
 	}
-
+	
 	public Category(String name) {
 		this.name = name;
 		this.alias = name;
 		this.image = "default.png";
 	}
-
+	
 	public Category(String name, Category parent) {
 		this(name);
 		this.parent = parent;
 	}	
 
-	
 	public Integer getId() {
 		return id;
 	}
@@ -87,7 +103,6 @@ public class Category {
 		return name;
 	}
 
-	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -132,7 +147,8 @@ public class Category {
 		this.children = children;
 	}
 	
-	
-	
-	
+	@Transient
+	public String getImagePath() {
+		return "/category-images/" + this.id + "/" + this.image;
+	}
 }
