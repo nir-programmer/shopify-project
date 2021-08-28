@@ -1,0 +1,31 @@
+2021-08-28 12:30:00.750  INFO 20679 --- [restartedMain] o.n.s.admin.ShopifyBackEndApplication    : Starting ShopifyBackEndApplication using Java 16.0.2 on nir with PID 20679 (/home/nir/Desktop/MyProjects/Shopify/ShopifyProject/ShopifyWebParent/ShopifyBackEnd/target/classes started by nir in /home/nir/Desktop/MyProjects/Shopify/ShopifyProject/ShopifyWebParent/ShopifyBackEnd)
+2021-08-28 12:30:00.765  INFO 20679 --- [restartedMain] o.n.s.admin.ShopifyBackEndApplication    : No active profile set, falling back to default profiles: default
+2021-08-28 12:30:00.904  INFO 20679 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-28 12:30:00.912  INFO 20679 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-28 12:30:02.035  INFO 20679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-28 12:30:02.137  INFO 20679 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 2 JPA repository interfaces.
+2021-08-28 12:30:03.144  INFO 20679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-28 12:30:03.155  INFO 20679 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-28 12:30:03.156  INFO 20679 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-28 12:30:03.256  INFO 20679 --- [restartedMain] o.a.c.c.C.[.[localhost].[/ShopifyAdmin]  : Initializing Spring embedded WebApplicationContext
+2021-08-28 12:30:03.257  INFO 20679 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2340 ms
+2021-08-28 12:30:03.609  INFO 20679 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-28 12:30:03.716  INFO 20679 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-28 12:30:04.003  INFO 20679 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-28 12:30:04.192  INFO 20679 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-28 12:30:04.912  INFO 20679 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-28 12:30:04.949  INFO 20679 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-08-28 12:30:06.098  INFO 20679 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-28 12:30:06.109  INFO 20679 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-28 12:30:06.196  WARN 20679 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-28 12:30:07.204  INFO 20679 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/images/**'] with []
+2021-08-28 12:30:07.205  INFO 20679 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/js/**'] with []
+2021-08-28 12:30:07.205  INFO 20679 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-08-28 12:30:07.263  INFO 20679 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ba09275, org.springframework.security.web.context.SecurityContextPersistenceFilter@26c55922, org.springframework.security.web.header.HeaderWriterFilter@1f2061ff, org.springframework.security.web.csrf.CsrfFilter@2bae97b9, org.springframework.security.web.authentication.logout.LogoutFilter@32f098fb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5e6ed84b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fd84035, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ee09a97, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6e34f775, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d2cbd77, org.springframework.security.web.session.SessionManagementFilter@639b497c, org.springframework.security.web.access.ExceptionTranslationFilter@3b254f63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11e1d391]
+2021-08-28 12:30:07.545  INFO 20679 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-28 12:30:08.313  INFO 20679 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-28 12:30:08.359  INFO 20679 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/ShopifyAdmin'
+2021-08-28 12:30:08.379  INFO 20679 --- [restartedMain] o.n.s.admin.ShopifyBackEndApplication    : Started ShopifyBackEndApplication in 8.461 seconds (JVM running for 10.247)
+2021-08-28 12:30:08.394  INFO 20679 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-28 12:30:08.400  INFO 20679 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-28 12:30:08.406  INFO 20679 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
