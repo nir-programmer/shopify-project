@@ -2,6 +2,7 @@ package org.nir.shopify.admin.category;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 import org.nir.shopify.common.entity.Category;
@@ -81,6 +82,15 @@ public class CategoryService {
 		}		
 		
 		return categoriesUsedInForm;
+	}
+	
+	
+	public Category get(Integer id) throws CategoryNotFoundException {
+		try {
+			return repo.findById(id).get();
+		} catch (NoSuchElementException ex) {
+			throw new CategoryNotFoundException("Could not find any category with ID " + id);
+		}
 	}
 	
 	private void listSubCategoriesUsedInForm(List<Category> categoriesUsedInForm, 
