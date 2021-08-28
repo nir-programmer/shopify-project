@@ -6,12 +6,16 @@
 	<div th:replace="navigation :: menu"></div>
 	<div>
 		<h2>Manage Categories</h2>	
-
+		
 		<a th:href="@{/categories/new}" class="fas fa-folder-plus fa-2x icon-dark mr-2"></a>
 		<a th:href="@{/categories/export/csv}" class="fas fa-file-csv fa-2x icon-dark mr-2"></a>
-
+				
 	</div>
-
+	
+	<div th:if="${message != null}" class="alert alert-success text-center">
+		[[${message}]]
+	</div>
+		
 	<div>
 		<form th:action="@{/categories/page/1}" class="form-inline m-3">
 			Filter:&nbsp;
@@ -26,7 +30,7 @@
 			</button>
 		</form>
 	</div>
-
+	
 	<div class="full-details">
 		<table class="table table-bordered table-striped table-hover table-responsive-xl">
 			<thead class="thead-dark">
@@ -55,9 +59,9 @@
 			</tbody>
 		</table>
 	</div>
-
+		
 	<div th:replace="fragments :: footer"></div>
-
+	
 </div>
 </body>
-</html> 
+</html>
