@@ -26,3 +26,6 @@
 2021-08-28 12:30:34.420  INFO 20933 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2021-08-28 12:30:34.456  INFO 20933 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/ShopifyAdmin'
 2021-08-28 12:30:34.471  INFO 20933 --- [restartedMain] o.n.s.admin.ShopifyBackEndApplication    : Started ShopifyBackEndApplication in 5.559 seconds (JVM running for 6.691)
+2021-08-28 12:33:36.130  INFO 20933 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-28 12:33:36.134  INFO 20933 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-28 12:33:36.145  INFO 20933 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
