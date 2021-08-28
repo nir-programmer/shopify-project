@@ -5,7 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
-@EntityScan({"org.nir.shopify.common.entity", "org.nir.shopify.admin.user"})
+@EntityScan({"org.nir.shopify.common.entity"})
+
 public class ShopifyBackEndApplication {
 
 	public static void main(String[] args) {
