@@ -19,6 +19,7 @@ public class MvcConfig implements WebMvcConfigurer {
 		
 		String pathPrefix = getPathPrefix();
 		System.err.println("Path Prefix : " + pathPrefix);
+		
 		String userPhotosPath = userPhotosDir.toFile().getAbsolutePath();
 		
 		
@@ -32,7 +33,7 @@ public class MvcConfig implements WebMvcConfigurer {
 		
 		//"file://"
 		registry.addResourceHandler("/category-images/**")
-			.addResourceLocations("file://" + categoryImagesPath + "/");		
+			.addResourceLocations(pathPrefix + categoryImagesPath + "/");		
 	}
 
 	private String getPathPrefix() 
