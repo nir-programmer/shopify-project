@@ -3,6 +3,8 @@ package org.nir.shopify.admin.category;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
@@ -140,5 +142,12 @@ public class CategoryController {
 		}
 		
 		return "redirect:/categories";
-	}	
+	}
+	
+	@GetMapping("/categories/export/csv")
+	public void exportToCSV(HttpServletResponse response) throws IOException {
+		List<Category> listCategories = service.listCategoriesUsedInForm();
+		CategoryCsvExporter exporter = new CategoryCsvExporter();
+		exporter.export(listCategories, response);
+	}
 }

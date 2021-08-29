@@ -13,6 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.nir.shopify.admin.AbstractExporter;
 import org.nir.shopify.common.entity.User;
 
 
@@ -60,7 +61,8 @@ public class UserExcelExporter extends AbstractExporter {
 	}
 	
 	public void export(List<User> listUsers, HttpServletResponse response) throws IOException {
-		super.setResponseHeader(response, "application/octet-stream", ".xlsx");
+		
+		super.setResponseHeader(response, "application/octet-stream", ".xlsx", "users_");
 	
 		writeHeaderLine();
 		writeDataLines(listUsers);
