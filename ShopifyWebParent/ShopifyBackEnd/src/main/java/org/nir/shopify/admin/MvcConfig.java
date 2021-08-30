@@ -16,6 +16,16 @@ public class MvcConfig implements WebMvcConfigurer {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) 
 	{
 
+		exposeDirectory("user-photos", registry);
+		exposeDirectory("../category-images", registry);
+		exposeDirectory("../brand-logos", registry);	
+		
+		
+	}
+
+	private void exposeDirectory(String pathPattern, ResourceHandlerRegistry registry) 
+	{
+		//The prefix path of the current OS file system
 		String pathPrefix = getPathPrefix();
 		System.err.println("Path Prefix : " + pathPrefix);
 		
@@ -46,10 +56,9 @@ public class MvcConfig implements WebMvcConfigurer {
 		
 		registry.addResourceHandler("/brand-logos/**").addResourceLocations(pathPrefix + brandLogosPath + "/");
 		
-		
-		
 	}
-
+	
+	
 	private String getPathPrefix() {
 		// detecting the operating system using `os.name` System property
 		String os = System.getProperty("os.name").toLowerCase();
