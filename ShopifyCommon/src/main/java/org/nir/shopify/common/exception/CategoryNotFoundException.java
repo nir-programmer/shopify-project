@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.category;
+package org.nir.shopify.common.exception;
 
 
 public class CategoryNotFoundException extends Exception {

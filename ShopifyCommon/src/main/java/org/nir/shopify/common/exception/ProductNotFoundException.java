@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.product;
+package org.nir.shopify.common.exception;
 
 public class ProductNotFoundException extends Exception {
 

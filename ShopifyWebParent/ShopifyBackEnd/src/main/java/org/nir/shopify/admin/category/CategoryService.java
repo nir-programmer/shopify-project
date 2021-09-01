@@ -11,6 +11,7 @@ import java.util.TreeSet;
 import javax.transaction.Transactional;
 
 import org.nir.shopify.common.entity.Category;
+import org.nir.shopify.common.exception.CategoryNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
