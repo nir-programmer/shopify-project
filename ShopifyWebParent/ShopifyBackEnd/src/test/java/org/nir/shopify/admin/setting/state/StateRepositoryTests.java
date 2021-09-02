@@ -45,7 +45,7 @@ public class StateRepositoryTests {
 //		State state = repo.save(new State("California", country));
 //		State state = repo.save(new State("Texas", country));
 //		State state = repo.save(new State("New York", country));
-		//State state = repo.save(new State("Washington", country));
+		State state = repo.save(new State("Washington", country));
 
 		assertThat(state).isNotNull();
 		assertThat(state.getId()).isGreaterThan(0);
