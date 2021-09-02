@@ -3,6 +3,8 @@ package org.nir.shopify.customer;
 import java.util.Date;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.nir.shopify.common.entity.Country;
 import org.nir.shopify.common.entity.Customer;
 import org.nir.shopify.setting.CountryRepository;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 import net.bytebuddy.utility.RandomString;
 
 @Service
+@Transactional
 public class CustomerService {
 
 	@Autowired private CountryRepository countryRepo;
@@ -36,14 +39,23 @@ public class CustomerService {
 		String randomCode = RandomString.make(64);
 		customer.setVerificationCode(randomCode);
 		
-		System.err.println("Verfication Code: " + randomCode);
 		customerRepo.save(customer);
 		
 	}
 
 	private void encodePassword(Customer customer) {
 		String encodedPassword = passwordEncoder.encode(customer.getPassword());
-		
 		customer.setPassword(encodedPassword);
+	}
+	
+	public boolean verify(String verificationCode) {
+		Customer customer = customerRepo.findByVerificationCode(verificationCode);
+		
+		if (customer == null || customer.isEnabled()) {
+			return false;
+		} else {
+			customerRepo.enable(customer.getId());
+			return true;
+		}
 	}
 }
