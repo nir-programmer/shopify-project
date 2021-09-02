@@ -11,9 +11,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
+import org.nir.shopify.common.entity.Country;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.test.context.support.WithMockUser;
@@ -22,7 +21,6 @@ import org.springframework.test.web.servlet.MvcResult;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.nir.shopify.common.entity.Country;
 
 @SpringBootTest//FOR INTEGRATION TESTS
 @AutoConfigureMockMvc

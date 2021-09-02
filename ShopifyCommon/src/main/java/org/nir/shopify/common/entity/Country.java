@@ -45,6 +45,11 @@ public class Country {
 		this.name = name;
 	}
 	
+	public Country(Integer id) {
+		this.id = id;
+	}
+	
+	//Getters and Setters
 	public Integer getId() {
 		return id;
 	}
