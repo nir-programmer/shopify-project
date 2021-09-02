@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.setting.state;
+package org.nir.shopify.common.entity;
 
 
 public class StateDTO {
