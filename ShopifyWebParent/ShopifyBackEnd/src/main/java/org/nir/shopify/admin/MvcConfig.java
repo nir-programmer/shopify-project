@@ -2,8 +2,11 @@ package org.nir.shopify.admin;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
+import org.nir.shopify.admin.paging.PagingAndSortingArgumentResolver;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -35,47 +38,13 @@ public class MvcConfig implements WebMvcConfigurer {
 		registry.addResourceHandler(logicalPath)
 			.addResourceLocations(pathPrefix + absolutePath + "/");	
 		
-		
-	/*	//EXPOSES USER IMAGES
-		String dirName = "user-photos";
-		Path userPhotosDir = Paths.get(dirName);
-
-
-		String userPhotosPath = userPhotosDir.toFile().getAbsolutePath();
-
-		registry.addResourceHandler("/" + dirName + "/**").addResourceLocations(pathPrefix + userPhotosPath + "/");
-
-		
-		//EXPOSES CATEGORIES IMAGES
-		String categoryImagesDirName = "../category-images";
-		Path categoryImagesDir = Paths.get(categoryImagesDirName);
-
-		String categoryImagesPath = categoryImagesDir.toFile().getAbsolutePath();
-		
-		registry.addResourceHandler("/category-images/**").addResourceLocations(pathPrefix + categoryImagesPath + "/");
-		
-		//EXPOSES BRANDS IMAGES
-		String brandLogosDirName = "../brand-logos";
-		Path brandLogosDir = Paths.get(brandLogosDirName);
-
-		String brandLogosPath = brandLogosDir.toFile().getAbsolutePath();
-		
-		registry.addResourceHandler("/brand-logos/**").addResourceLocations(pathPrefix + brandLogosPath + "/");
-		*/
-		///////////////
-		
-		
+	
 	}
 	
-	/*
-	 * Path path = Paths.get(pathPattern); String absolutePath =
-	 * path.toFile().getAbsolutePath();
-	 * 
-	 * String logicalPath = pathPattern.replace("../", "") + "/**";
-	 * 
-	 * registry.addResourceHandler(logicalPath) .addResourceLocations("file:/" +
-	 * absolutePath + "/");
-	 */
+	@Override
+	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
+		resolvers.add(new PagingAndSortingArgumentResolver());
+	}
 	
 	
 	private String getPathPrefix() {
@@ -103,5 +72,7 @@ public class MvcConfig implements WebMvcConfigurer {
 	public enum OS {
 		WINDOWS, LINUX, MAC, SOLARIS
 	};
+	
+	
 
 }

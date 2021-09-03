@@ -1,13 +1,13 @@
 package org.nir.shopify.admin.brand;
 import java.util.List;
 
+import org.nir.shopify.admin.paging.SearchRepository;
 import org.nir.shopify.common.entity.Brand;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface BrandRepository extends PagingAndSortingRepository<Brand, Integer> {
+public interface BrandRepository extends SearchRepository<Brand, Integer> {
 	
 	public Long countById(Integer id);
 	
