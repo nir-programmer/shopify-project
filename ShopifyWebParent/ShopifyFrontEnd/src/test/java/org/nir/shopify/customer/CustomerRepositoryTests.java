@@ -6,15 +6,15 @@ import java.util.Date;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
+import org.nir.shopify.common.entity.AuthenticationType;
+import org.nir.shopify.common.entity.Country;
+import org.nir.shopify.common.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
-
-import org.nir.shopify.common.entity.Country;
-import org.nir.shopify.common.entity.Customer;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
@@ -139,5 +139,15 @@ public class CustomerRepositoryTests {
 
 		Customer customer = repo.findById(customerId).get();
 		assertThat(customer.isEnabled()).isTrue();
+	}
+	
+	@Test
+	public void testUpdateAuthenticationType() {
+		Integer id = 1;
+		repo.updateAuthenticationType(id, AuthenticationType.DATABASE);
+
+		Customer customer = repo.findById(id).get();
+
+		assertThat(customer.getAuthenticationType()).isEqualTo(AuthenticationType.DATABASE);
 	}
 }

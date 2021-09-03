@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.nir.shopify.common.entity.AuthenticationType;
 import org.nir.shopify.common.entity.Country;
 import org.nir.shopify.common.entity.Customer;
 import org.nir.shopify.setting.CountryRepository;
@@ -56,6 +57,12 @@ public class CustomerService {
 		} else {
 			customerRepo.enable(customer.getId());
 			return true;
+		}
+	}
+	
+	public void updateAuthentication(Customer customer, AuthenticationType type) {
+		if (!customer.getAuthenticationType().equals(type)) {
+			customerRepo.updateAuthenticationType(customer.getId(), type);
 		}
 	}
 }
