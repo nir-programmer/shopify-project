@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /Shopify
+spring:
+  datasource:
+    password: superduper100
+    url: jdbc:mysql://localhost:3306/shopify_db
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: false
+    
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 745480011654-pgoviklng2grs2ithnk96uvf0ufimuis.apps.googleusercontent.com
+            client-secret: F-G_XRTmNifvR_L-GNGwoEBa
+            scope:
+            - email
+            - profile
+
