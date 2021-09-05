@@ -1,5 +1,7 @@
 package org.nir.shopify.shoppingcart;
 
+import java.util.List;
+
 import org.nir.shopify.common.entity.CartItem;
 import org.nir.shopify.common.entity.Customer;
 import org.nir.shopify.common.entity.Product;
@@ -37,5 +39,9 @@ public class ShoppingCartService {
 		cartRepo.save(cartItem);
 
 		return updatedQuantity;
+	}
+	
+	public List<CartItem> listCartItems(Customer customer) {
+		return cartRepo.findByCustomer(customer);
 	}
 }
