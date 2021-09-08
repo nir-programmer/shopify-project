@@ -41,7 +41,7 @@ public class ProductController {
 	public String listByPage(
 			@PagingAndSortingParam(listName = "listProducts", moduleURL = "/products") PagingAndSortingHelper helper,
 			@PathVariable(name = "pageNum") int pageNum, Model model,
-			@Param("categoryId") Integer categoryId
+			Integer categoryId
 			) {
 		
 		productService.listByPage(pageNum, helper, categoryId);
