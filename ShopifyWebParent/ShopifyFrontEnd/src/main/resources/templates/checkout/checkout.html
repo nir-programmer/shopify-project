@@ -9,7 +9,7 @@
 	<div class="text-center">
 		<h2>Checkout</h2>
 	</div>
-
+	
 	<div class="row m-1">
 		<div class="col-sm-8">
 			<div class="card">
@@ -17,7 +17,7 @@
 				<div class="card-body">
 					<p>
 						<b>Ship to:</b>&nbsp; [[${shippingAddress}]]
-						<a th:href="@{/address_book}">[Ship to another address]</a>
+						<a th:href="@{/address_book(redirect=checkout)}">[Ship to another address]</a>
 					</p>
 					<p>
 						<b>Days to deliver: </b>[[${checkoutInfo.deliverDays}]] day(s)
@@ -27,7 +27,7 @@
 					</p>
 				</div>
 			</div>		
-
+			
 			<div class="card mt-3 mb-3">
 				<div class="card-header"><h5>Payment Method</h5></div>
 				<div class="card-body">
@@ -41,7 +41,7 @@
 				</div>			
 			</div>
 		</div>
-
+		
 		<div class="col-sm-4">
 			<div class="card">
 				<div class="card-header"><h5>Order Summary</h5></div>
@@ -66,17 +66,17 @@
 						<tr><td colspan="3"><hr/></tr>
 					</table>
 					</div>
-
+					
 					<div class="row mt-2">
 						<div class="col">Product Total: </div>
 						<div class="col"><div th:replace="fragments :: format_currency(${checkoutInfo.productTotal})"></div></div>
 					</div>
-
+					
 					<div class="row mt-2">
 						<div class="col">Shipping Total: </div>
 						<div class="col"><div th:replace="fragments :: format_currency(${checkoutInfo.shippingCostTotal})"></div></div>
 					</div>
-
+							
 					<div class="row mt-2">
 						<div class="col">Payment Total: </div>
 						<div class="col"><b><div th:replace="fragments :: format_currency(${checkoutInfo.paymentTotal})"></div></b></div>
@@ -85,8 +85,8 @@
 			</div>		
 		</div>		
 	</div>
-
+	
 	<div th:replace="navigation :: footer_menu"></div>
 </div>
 </body>
-</html>
+</html>	
