@@ -2,10 +2,9 @@ package org.nir.shopify.security;
 
 import java.util.Collection;
 
+import org.nir.shopify.common.entity.Customer;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import org.nir.shopify.common.entity.Customer;
 
 public class CustomerUserDetails implements UserDetails {
 	private Customer customer;

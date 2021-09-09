@@ -2,6 +2,8 @@ package org.nir.shopify;
 
 import java.util.List;
 
+import org.nir.shopify.category.CategoryService;
+import org.nir.shopify.common.entity.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -9,9 +11,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import org.nir.shopify.category.CategoryService;
-import org.nir.shopify.common.entity.Category;
 
 
 @Controller
