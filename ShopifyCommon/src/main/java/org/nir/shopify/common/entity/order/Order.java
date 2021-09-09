@@ -9,9 +9,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -19,7 +16,9 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import org.nir.shopify.common.entity.AbstractAddress;
+import org.nir.shopify.common.entity.Address;
 import org.nir.shopify.common.entity.Customer;
+
 
 @Entity
 @Table(name = "orders")
@@ -181,5 +180,17 @@ public class Order extends AbstractAddress {
 		destination += country;
 		
 		return destination;
+	}
+
+	public void copyShippingAddress(Address address) {
+		setFirstName(address.getFirstName());
+		setLastName(address.getLastName());
+		setPhoneNumber(address.getPhoneNumber());
+		setAddressLine1(address.getAddressLine1());
+		setAddressLine2(address.getAddressLine2());
+		setCity(address.getCity());
+		setCountry(address.getCountry().getName());
+		setPostalCode(address.getPostalCode());
+		setState(address.getState());			
 	}
 }
