@@ -1,4 +1,5 @@
-package org.nir.shopify.common.entity;
+package org.nir.shopify.common.entity.setting;
+
 public enum SettingCategory {
 	GENERAL, MAIL_SERVER, MAIL_TEMPLATES, CURRENCY, PAYMENT
 }

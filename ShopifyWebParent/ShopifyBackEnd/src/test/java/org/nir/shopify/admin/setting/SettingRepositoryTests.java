@@ -9,9 +9,8 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
-
-import org.nir.shopify.common.entity.Setting;
-import org.nir.shopify.common.entity.SettingCategory;
+import org.nir.shopify.common.entity.setting.Setting;
+import org.nir.shopify.common.entity.setting.SettingCategory;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)

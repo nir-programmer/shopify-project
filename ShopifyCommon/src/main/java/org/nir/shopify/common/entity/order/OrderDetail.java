@@ -1,4 +1,4 @@
-package org.nir.shopify.common.entity;
+package org.nir.shopify.common.entity.order;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,34 +8,25 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.nir.shopify.common.entity.IdBasedEntity;
+import org.nir.shopify.common.entity.product.Product;
+
 @Entity
 @Table(name = "order_details")
-public class OrderDetail {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
+public class OrderDetail extends IdBasedEntity {
 	private int quantity;
 	private float productCost;
 	private float shippingCost;
 	private float unitPrice;
 	private float subtotal;
-
+	
 	@ManyToOne
 	@JoinColumn(name = "product_id")
 	private Product product;
-
+	
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public int getQuantity() {
 		return quantity;
@@ -92,6 +83,6 @@ public class OrderDetail {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
-
-
+	
+	
 }

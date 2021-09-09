@@ -3,7 +3,7 @@ package org.nir.shopify.admin.order;
 import java.util.NoSuchElementException;
 
 import org.nir.shopify.admin.paging.PagingAndSortingHelper;
-import org.nir.shopify.common.entity.Order;
+import org.nir.shopify.common.entity.order.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

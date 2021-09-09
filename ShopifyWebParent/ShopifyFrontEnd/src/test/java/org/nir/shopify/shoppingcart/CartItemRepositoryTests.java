@@ -14,7 +14,7 @@ import org.springframework.test.annotation.Rollback;
 
 import org.nir.shopify.common.entity.CartItem;
 import org.nir.shopify.common.entity.Customer;
-import org.nir.shopify.common.entity.Product;
+import org.nir.shopify.common.entity.product.Product;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)

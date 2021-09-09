@@ -13,8 +13,8 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import org.nir.shopify.admin.FileUploadUtil;
-import org.nir.shopify.common.entity.Product;
-import org.nir.shopify.common.entity.ProductImage;
+import org.nir.shopify.common.entity.product.Product;
+import org.nir.shopify.common.entity.product.ProductImage;
 
 public class ProductSaveHelper {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ProductSaveHelper.class);

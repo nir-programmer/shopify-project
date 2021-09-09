@@ -1,6 +1,6 @@
 package org.nir.shopify.admin.product;
 
-import org.nir.shopify.common.entity.Product;
+import org.nir.shopify.common.entity.product.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Modifying;

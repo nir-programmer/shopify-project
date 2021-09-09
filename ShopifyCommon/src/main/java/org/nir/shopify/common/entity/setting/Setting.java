@@ -1,4 +1,4 @@
-package org.nir.shopify.common.entity;
+package org.nir.shopify.common.entity.setting;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

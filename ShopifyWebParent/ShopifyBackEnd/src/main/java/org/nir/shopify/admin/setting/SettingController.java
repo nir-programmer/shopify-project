@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.common.entity.Currency;
-import org.nir.shopify.common.entity.Setting;
+import org.nir.shopify.common.entity.setting.Setting;
 
 @Controller
 public class SettingController {

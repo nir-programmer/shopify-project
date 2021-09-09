@@ -2,8 +2,8 @@ package org.nir.shopify.setting;
 
 import java.util.List;
 
-import org.nir.shopify.common.entity.Setting;
-import org.nir.shopify.common.entity.SettingBag;
+import org.nir.shopify.common.entity.setting.Setting;
+import org.nir.shopify.common.entity.setting.SettingBag;
 
 public class EmailSettingBag extends SettingBag {
 

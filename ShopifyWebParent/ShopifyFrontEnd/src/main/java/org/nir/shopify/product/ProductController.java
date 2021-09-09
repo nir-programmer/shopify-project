@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.nir.shopify.category.CategoryService;
 import org.nir.shopify.common.entity.Category;
-import org.nir.shopify.common.entity.Product;
+import org.nir.shopify.common.entity.product.Product;
 import org.nir.shopify.common.exception.CategoryNotFoundException;
 import org.nir.shopify.common.exception.ProductNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

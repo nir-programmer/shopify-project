@@ -1,11 +1,10 @@
 package org.nir.shopify.product;
 
+import org.nir.shopify.common.entity.product.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
-
-import org.nir.shopify.common.entity.Product;
 
 public interface ProductRepository extends PagingAndSortingRepository<Product, Integer> {
 

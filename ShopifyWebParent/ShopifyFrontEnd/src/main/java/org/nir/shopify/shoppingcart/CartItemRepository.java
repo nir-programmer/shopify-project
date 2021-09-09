@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.nir.shopify.common.entity.CartItem;
 import org.nir.shopify.common.entity.Customer;
-import org.nir.shopify.common.entity.Product;
+import org.nir.shopify.common.entity.product.Product;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

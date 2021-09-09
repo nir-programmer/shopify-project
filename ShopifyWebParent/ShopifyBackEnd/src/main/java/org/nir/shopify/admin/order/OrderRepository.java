@@ -1,7 +1,7 @@
 package org.nir.shopify.admin.order;
 
 import org.nir.shopify.admin.paging.SearchRepository;
-import org.nir.shopify.common.entity.Order;
+import org.nir.shopify.common.entity.order.Order;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;

@@ -1,23 +1,18 @@
 
-package org.nir.shopify.common.entity;
+package org.nir.shopify.common.entity.product;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.nir.shopify.common.entity.IdBasedEntity;
+
 @Entity
 @Table(name = "product_images")
-public class ProductImage {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+public class ProductImage extends IdBasedEntity {
 	
 	@Column(nullable = false)
 	private String name;
@@ -28,24 +23,17 @@ public class ProductImage {
 	
 	public ProductImage() {
 	}
-	
+
 	public ProductImage(Integer id, String name, Product product) {
 		this.id = id;
 		this.name = name;
 		this.product = product;
 	}
 
+
 	public ProductImage(String name, Product product) {
 		this.name = name;
 		this.product = product;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getName() {

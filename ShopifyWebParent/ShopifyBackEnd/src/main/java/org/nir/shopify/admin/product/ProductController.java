@@ -11,7 +11,7 @@ import org.nir.shopify.admin.paging.PagingAndSortingParam;
 import org.nir.shopify.admin.security.ShopifyUserDetails;
 import org.nir.shopify.common.entity.Brand;
 import org.nir.shopify.common.entity.Category;
-import org.nir.shopify.common.entity.Product;
+import org.nir.shopify.common.entity.product.Product;
 import org.nir.shopify.common.exception.ProductNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;

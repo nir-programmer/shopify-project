@@ -6,7 +6,7 @@ import javax.transaction.Transactional;
 
 import org.nir.shopify.common.entity.CartItem;
 import org.nir.shopify.common.entity.Customer;
-import org.nir.shopify.common.entity.Product;
+import org.nir.shopify.common.entity.product.Product;
 import org.nir.shopify.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

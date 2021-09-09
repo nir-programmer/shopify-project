@@ -3,8 +3,8 @@ package org.nir.shopify.admin.setting;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.nir.shopify.common.entity.Setting;
-import org.nir.shopify.common.entity.SettingCategory;
+import org.nir.shopify.common.entity.setting.Setting;
+import org.nir.shopify.common.entity.setting.SettingCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

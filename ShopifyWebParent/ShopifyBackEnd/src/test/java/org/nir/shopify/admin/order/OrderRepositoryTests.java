@@ -14,11 +14,11 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 
 import org.nir.shopify.common.entity.Customer;
-import org.nir.shopify.common.entity.Order;
-import org.nir.shopify.common.entity.OrderDetail;
-import org.nir.shopify.common.entity.OrderStatus;
-import org.nir.shopify.common.entity.PaymentMethod;
-import org.nir.shopify.common.entity.Product;
+import org.nir.shopify.common.entity.order.Order;
+import org.nir.shopify.common.entity.order.OrderDetail;
+import org.nir.shopify.common.entity.order.OrderStatus;
+import org.nir.shopify.common.entity.order.PaymentMethod;
+import org.nir.shopify.common.entity.product.Product;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)

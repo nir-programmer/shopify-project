@@ -9,13 +9,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.nir.shopify.common.entity.product.Product;
+
 @Entity
 @Table(name = "cart_items")
-public class CartItem {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
+public class CartItem extends IdBasedEntity {
+	
 	@ManyToOne
 	@JoinColumn(name = "customer_id")
 	private Customer customer;
@@ -23,18 +22,10 @@ public class CartItem {
 	@ManyToOne
 	@JoinColumn(name = "product_id")	
 	private Product product;
-
+	
 	private int quantity;
-
+	
 	public CartItem() {
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public Customer getCustomer() {
@@ -66,11 +57,9 @@ public class CartItem {
 		return "CartItem [id=" + id + ", customer=" + customer.getFullName() + ", product=" + product.getShortName() + ", quantity=" + quantity
 				+ "]";
 	}
-	
+
 	@Transient
 	public float getSubtotal() {
 		return product.getDiscountPrice() * quantity;
 	}
-
-
 }
