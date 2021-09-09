@@ -9,6 +9,7 @@ import org.nir.shopify.common.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 @Transactional
 public class AddressService {
@@ -35,7 +36,11 @@ public class AddressService {
 		if (defaultAddressId > 0) {
 			repo.setDefaultAddress(defaultAddressId);
 		}
-
+		
 		repo.setNonDefaultForOthers(defaultAddressId, customerId);
+	}
+	
+	public Address getDefaultAddress(Customer customer) {
+		return repo.findDefaultByCustomer(customer.getId());
 	}
 }

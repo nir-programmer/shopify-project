@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 
+
 public interface AddressRepository extends CrudRepository<Address, Integer> {
 	
 	public List<Address> findByCustomer(Customer customer);
@@ -29,4 +30,7 @@ public interface AddressRepository extends CrudRepository<Address, Integer> {
 			+ "WHERE a.id != ?1 AND a.customer.id = ?2")
 	@Modifying
 	public void setNonDefaultForOthers(Integer defaultAddressId, Integer customerId);
+	
+	@Query("SELECT a FROM Address a WHERE a.customer.id = ?1 AND a.defaultForShipping = true")
+	public Address findDefaultByCustomer(Integer customerId);
 }

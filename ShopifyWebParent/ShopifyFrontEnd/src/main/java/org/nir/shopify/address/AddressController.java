@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
 @Controller
 public class AddressController {
 
@@ -102,7 +103,14 @@ public class AddressController {
 			HttpServletRequest request) {
 		Customer customer = getAuthenticatedCustomer(request);
 		addressService.setDefaultAddress(addressId, customer.getId());
-
-		return "redirect:/address_book"; 
+		
+		String redirectOption = request.getParameter("redirect");
+		String redirectURL = "redirect:/address_book";
+		
+		if ("cart".equals(redirectOption)) {
+			redirectURL = "redirect:/cart";
+		}		
+		
+		return redirectURL; 
 	}
 }
