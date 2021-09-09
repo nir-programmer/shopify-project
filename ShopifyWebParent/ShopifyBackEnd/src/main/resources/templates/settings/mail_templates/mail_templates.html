@@ -12,21 +12,21 @@
 		    <a class="nav-link" data-toggle="tab" href="#orderConfirmation" role="tab">Order Confirmation</a>
 		  </li>	  
 		</ul>
-
+		
 		<div class="tab-content">
 		  <div class="tab-pane active p-3" id="customerVerification" role="tabpanel">
 		  	<div th:replace="settings/mail_templates/customer_verification:: content"></div>
 		  </div>
 		  <div class="tab-pane p-3" id="orderConfirmation" role="tabpanel">
-			<h2>Order Confirmation Email Template</h2>
+			<div th:replace="settings/mail_templates/order_confirmation:: content"></div>
 		  </div>	  	
 		 </div>
 	</div>
-
+	
 	<div class="text-center">
 		<input type="submit" value="Save" class="btn btn-primary m-3" />
 	</div>	
 </form>	
 </div>
 </body>
-</html> 
+</html>
