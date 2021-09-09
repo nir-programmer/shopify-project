@@ -27,11 +27,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/account_details", "/update_account_details", "/cart").authenticated()
+			.antMatchers("/account_details", "/update_account_details", 
+					"/cart", "/address_book/**").authenticated()
 			.anyRequest().permitAll()
 			.and()
 			.formLogin()
