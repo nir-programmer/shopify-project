@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.nir.shopify.admin.paging.PagingAndSortingHelper;
 import org.nir.shopify.admin.paging.PagingAndSortingParam;
 import org.nir.shopify.admin.setting.SettingService;
+import org.nir.shopify.common.entity.Country;
 import org.nir.shopify.common.entity.order.Order;
 import org.nir.shopify.common.entity.setting.Setting;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,4 +77,25 @@ public class OrderController {
 
 		return defaultRedirectURL;
 	}
+	
+	@GetMapping("/orders/edit/{id}")
+	public String editOrder(@PathVariable("id") Integer id, Model model, RedirectAttributes ra,
+			HttpServletRequest request) {
+		try {
+			Order order = orderService.get(id);;
+
+			List<Country> listCountries = orderService.listAllCountries();
+
+			model.addAttribute("pageTitle", "Edit Order (ID: " + id + ")");
+			model.addAttribute("order", order);
+			model.addAttribute("listCountries", listCountries);
+
+			return "orders/order_form";
+
+		} catch (OrderNotFoundException ex) {
+			ra.addFlashAttribute("message", ex.getMessage());
+			return defaultRedirectURL;
+		}
+
+	}	
 }

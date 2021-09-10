@@ -1,5 +1,7 @@
 package org.nir.shopify.common.entity.order;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
@@ -230,6 +232,12 @@ public class Order extends AbstractAddress {
 	public void setOrderTracks(List<OrderTrack> orderTracks) {
 		this.orderTracks = orderTracks;
 	}
+	
+	@Transient
+	public String getDeliverDateOnForm() {
+		DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
+		return dateFormatter.format(this.deliverDate);
+	}	
 	
 	
 }
