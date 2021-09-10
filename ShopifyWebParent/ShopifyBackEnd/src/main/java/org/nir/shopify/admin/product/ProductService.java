@@ -110,4 +110,12 @@ public class ProductService {
 			throw new ProductNotFoundException("Could not find any product with ID " + id);
 		}
 	}
+	
+	
+	public void searchProducts(int pageNum, PagingAndSortingHelper helper) {
+		Pageable pageable = helper.createPageable(PRODUCTS_PER_PAGE, pageNum);
+		String keyword = helper.getKeyword();		
+		Page<Product> page = repo.searchProductsByName(keyword, pageable);		
+		helper.updateModelAttributes(pageNum, page);
+	}
 }
