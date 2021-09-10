@@ -4,10 +4,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import org.nir.shopify.checkout.CheckoutInfo;
 import org.nir.shopify.common.entity.Address;
 import org.nir.shopify.common.entity.CartItem;
 import org.nir.shopify.common.entity.Customer;
-import org.nir.shopify.common.entity.checkout.CheckoutInfo;
+//import org.nir.shopify.common.entity.checkout.CheckoutInfo;
 import org.nir.shopify.common.entity.order.Order;
 import org.nir.shopify.common.entity.order.OrderDetail;
 import org.nir.shopify.common.entity.order.OrderStatus;

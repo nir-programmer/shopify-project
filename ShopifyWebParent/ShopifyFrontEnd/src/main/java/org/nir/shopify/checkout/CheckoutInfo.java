@@ -1,4 +1,6 @@
-package org.nir.shopify.common.entity.checkout;
+package org.nir.shopify.checkout;
+
+
 
 import java.text.DecimalFormat;
 import java.util.Calendar;
@@ -67,8 +69,9 @@ public class CheckoutInfo {
 		this.codSupported = codSupported;
 	}
 	
+	
 	public String getPaymentTotal4PayPal() {
-		DecimalFormat formatter = new DecimalFormat("###,###.##");
+		DecimalFormat formatter = new DecimalFormat("##.##");
 		return formatter.format(paymentTotal);
 	}
 

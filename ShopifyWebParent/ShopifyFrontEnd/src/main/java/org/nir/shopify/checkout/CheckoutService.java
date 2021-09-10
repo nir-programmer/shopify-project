@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.nir.shopify.common.entity.CartItem;
 import org.nir.shopify.common.entity.ShippingRate;
-import org.nir.shopify.common.entity.checkout.CheckoutInfo;
+//import org.nir.shopify.common.entity.checkout.CheckoutInfo;
 import org.nir.shopify.common.entity.product.Product;
 import org.springframework.stereotype.Service;
 
