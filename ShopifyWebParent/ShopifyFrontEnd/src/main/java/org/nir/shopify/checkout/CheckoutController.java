@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.nir.shopify.Utility;
 import org.nir.shopify.address.AddressService;
+import org.nir.shopify.checkout.paypal.PayPalApiException;
+import org.nir.shopify.checkout.paypal.PayPalService;
 import org.nir.shopify.common.entity.Address;
 import org.nir.shopify.common.entity.CartItem;
 import org.nir.shopify.common.entity.Customer;
@@ -46,6 +48,7 @@ public class CheckoutController {
 	@Autowired private ShoppingCartService cartService;
 	@Autowired private OrderService orderService;
 	@Autowired private SettingService settingService;
+	@Autowired private PayPalService paypalService;
 	
 	@GetMapping("/checkout")
 	public String showCheckoutPage(Model model, HttpServletRequest request) {
@@ -148,5 +151,31 @@ public class CheckoutController {
 		
 		helper.setText(content, true);
 		mailSender.send(message);		
+	}
+	
+	@PostMapping("/process_paypal_order")
+	public String processPayPalOrder(HttpServletRequest request, Model model) 
+			throws UnsupportedEncodingException, MessagingException {
+		String orderId = request.getParameter("orderId");
+		
+		String pageTitle = "Checkout Failure";
+		String message = null;
+		
+		try {
+			if (paypalService.validateOrder(orderId)) {
+				return placeOrder(request);
+			} else {
+				pageTitle = "Checkout Failure";
+				message = "ERROR: Transaction could not be completed because order information is invalid";
+			}
+		} catch (PayPalApiException e) {
+			message = "ERROR: Transaction failed due to error: " + e.getMessage();
+		}
+		
+		model.addAttribute("pageTitle", pageTitle);
+		model.addAttribute("title", pageTitle);
+		model.addAttribute("message", message);
+		
+		return "message";
 	}
 }
