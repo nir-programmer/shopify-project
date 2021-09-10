@@ -24,6 +24,7 @@ import org.nir.shopify.customer.CustomerService;
 import org.nir.shopify.order.OrderService;
 import org.nir.shopify.setting.CurrencySettingBag;
 import org.nir.shopify.setting.EmailSettingBag;
+import org.nir.shopify.setting.PaymentSettingBag;
 import org.nir.shopify.setting.SettingService;
 import org.nir.shopify.shipping.ShippingRateService;
 import org.nir.shopify.shoppingcart.ShoppingCartService;
@@ -68,6 +69,13 @@ public class CheckoutController {
 		List<CartItem> cartItems = cartService.listCartItems(customer);
 		CheckoutInfo checkoutInfo = checkoutService.prepareCheckout(cartItems, shippingRate);
 		
+		String currencyCode = settingService.getCurrencyCode();
+		PaymentSettingBag paymentSettings = settingService.getPaymentSettings();
+		String paypalClientId = paymentSettings.getClientID();
+		
+		model.addAttribute("paypalClientId", paypalClientId);
+		model.addAttribute("currencyCode", currencyCode);
+		model.addAttribute("customer", customer);
 		model.addAttribute("checkoutInfo", checkoutInfo);
 		model.addAttribute("cartItems", cartItems);
 		

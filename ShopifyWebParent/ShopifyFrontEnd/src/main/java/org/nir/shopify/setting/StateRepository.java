@@ -6,7 +6,8 @@ import org.nir.shopify.common.entity.Country;
 import org.nir.shopify.common.entity.State;
 import org.springframework.data.repository.CrudRepository;
 
-public interface StateRepository extends CrudRepository<State, Integer> {
 
+public interface StateRepository extends CrudRepository<State, Integer> {
+	
 	public List<State> findByCountryOrderByNameAsc(Country country);
 }
