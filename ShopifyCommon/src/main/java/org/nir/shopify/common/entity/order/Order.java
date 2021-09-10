@@ -1,7 +1,9 @@
 package org.nir.shopify.common.entity.order;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -50,6 +52,9 @@ public class Order extends AbstractAddress {
 	
 	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
 	private Set<OrderDetail> orderDetails = new HashSet<>();
+	
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	private List<OrderTrack> orderTracks = new ArrayList<>();
 
 	public String getCountry() {
 		return country;
@@ -194,26 +199,35 @@ public class Order extends AbstractAddress {
 		setState(address.getState());			
 	}
 	
-
 	@Transient
 	public String getShippingAddress() {
 		String address = firstName;
-
+		
 		if (lastName != null && !lastName.isEmpty()) address += " " + lastName;
-
+		
 		if (!addressLine1.isEmpty()) address += ", " + addressLine1;
-
+		
 		if (addressLine2 != null && !addressLine2.isEmpty()) address += ", " + addressLine2;
-
+		
 		if (!city.isEmpty()) address += ", " + city;
-
+		
 		if (state != null && !state.isEmpty()) address += ", " + state;
-
+		
 		address += ", " + country;
-
+		
 		if (!postalCode.isEmpty()) address += ". Postal Code: " + postalCode;
 		if (!phoneNumber.isEmpty()) address += ". Phone Number: " + phoneNumber;
-
+		
 		return address;
-	}	
+	}
+
+	public List<OrderTrack> getOrderTracks() {
+		return orderTracks;
+	}
+
+	public void setOrderTracks(List<OrderTrack> orderTracks) {
+		this.orderTracks = orderTracks;
+	}
+	
+	
 }
