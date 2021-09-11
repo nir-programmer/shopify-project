@@ -1,5 +1,6 @@
 package org.nir.shopify.admin.order;
 
+import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -7,6 +8,8 @@ import org.nir.shopify.admin.paging.PagingAndSortingHelper;
 import org.nir.shopify.admin.setting.country.CountryRepository;
 import org.nir.shopify.common.entity.Country;
 import org.nir.shopify.common.entity.order.Order;
+import org.nir.shopify.common.entity.order.OrderStatus;
+import org.nir.shopify.common.entity.order.OrderTrack;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -76,4 +79,28 @@ public class OrderService {
 
 		orderRepo.save(orderInForm);
 	}	
+	
+	public void updateStatus(Integer orderId, String status) {
+		Order orderInDB = orderRepo.findById(orderId).get();
+		OrderStatus statusToUpdate = OrderStatus.valueOf(status);
+		
+		if (!orderInDB.hasStatus(statusToUpdate)) {
+			List<OrderTrack> orderTracks = orderInDB.getOrderTracks();
+			
+			OrderTrack track = new OrderTrack();
+			track.setOrder(orderInDB);
+			track.setStatus(statusToUpdate);
+			track.setUpdatedTime(new Date());
+			track.setNotes(statusToUpdate.defaultDescription());
+			
+			orderTracks.add(track);
+			
+			orderInDB.setStatus(statusToUpdate);
+			
+			orderRepo.save(orderInDB);
+		}
+		
+	}
+	
+	
 }
