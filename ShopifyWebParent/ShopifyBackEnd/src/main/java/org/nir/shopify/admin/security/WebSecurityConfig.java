@@ -45,6 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
+			.antMatchers("/states/list_by_country/**").hasAnyAuthority("Admin", "Salesperson")
 			.antMatchers("/users/**", "/settings/**", "/countries/**", "/states/**").hasAuthority("Admin")
 			.antMatchers("/categories/**", "/brands/**").hasAnyAuthority("Admin", "Editor")
 			
@@ -57,6 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
 				
 			.antMatchers("/products/**").hasAnyAuthority("Admin", "Editor")
+			
+			.antMatchers("/orders", "/orders/", "/orders/page/**", "/orders/detail/**").hasAnyAuthority("Admin", "Salesperson", "Shipper")
 			
 			.antMatchers("/customers/**", "/orders/**", "/get_shipping_cost").hasAnyAuthority("Admin", "Salesperson")
 			
@@ -73,7 +76,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 					.tokenValiditySeconds(7 * 24 * 60 * 60);
 					;
 			http.headers().frameOptions().sameOrigin();
-	}
+	}	
 	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
