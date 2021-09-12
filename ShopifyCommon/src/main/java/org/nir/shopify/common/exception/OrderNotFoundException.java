@@ -1,4 +1,4 @@
-package org.nir.shopify.admin.order;
+package org.nir.shopify.common.exception;
 
 public class OrderNotFoundException extends Exception {
 

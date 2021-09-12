@@ -11,8 +11,10 @@ import org.nir.shopify.common.entity.Customer;
 import org.nir.shopify.common.entity.order.Order;
 import org.nir.shopify.common.entity.order.OrderDetail;
 import org.nir.shopify.common.entity.order.OrderStatus;
+import org.nir.shopify.common.entity.order.OrderTrack;
 import org.nir.shopify.common.entity.order.PaymentMethod;
 import org.nir.shopify.common.entity.product.Product;
+import org.nir.shopify.common.exception.OrderNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -90,5 +92,41 @@ public class OrderService {
 	
 	public Order getOrder(Integer id, Customer customer) {
 		return repo.findByIdAndCustomer(id, customer);
+	}
+	
+	
+	public void setOrderReturnRequested(OrderReturnRequest request, Customer customer) throws OrderNotFoundException
+	{
+		Order order = this.repo.findByIdAndCustomer(request.getOrderId(), customer);
+		
+		if(order == null )
+		{
+			throw new OrderNotFoundException("Order ID " + request.getOrderId() + " not found");
+		}
+		
+		if(order.isReturnRequested()) return ; 
+		
+		OrderTrack track = new OrderTrack();
+		track.setOrder(order);
+		track.setUpdatedTime(new Date());
+		track.setStatus(OrderStatus.RETURN_REQUESTED);
+		
+		String notes = "Reason: " + request.getReason();
+		
+		if(!"".equals(request.getNote()))
+		{
+			notes += ". " + request.getNote();
+		}
+		
+		track.setNotes(notes);
+		
+		order.getOrderTracks().add(track);
+		
+		order.setStatus(OrderStatus.RETURN_REQUESTED);
+		
+		//persist the order  to db
+		this.repo.save(order); 
+		
+		
 	}
 }

@@ -49,10 +49,7 @@
 			<artifactId>spring-security-test</artifactId>
 		</dependency>		
 		
-		
-		
-		
-		
+
 	</dependencies>
 
 	<build>
