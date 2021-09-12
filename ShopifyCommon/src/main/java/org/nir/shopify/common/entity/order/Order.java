@@ -328,4 +328,9 @@ public class Order extends AbstractAddress {
 		
 		return productNames;
 	}	
+	
+	@Transient
+	public boolean isProcessing() {
+		return hasStatus(OrderStatus.PROCESSING);
+	}
 }
