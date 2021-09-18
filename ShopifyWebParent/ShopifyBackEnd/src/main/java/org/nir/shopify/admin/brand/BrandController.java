@@ -3,6 +3,7 @@ package org.nir.shopify.admin.brand;
 import java.io.IOException;
 import java.util.List;
 
+import org.nir.shopify.admin.AmazonS3Util;
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.admin.category.CategoryService;
 import org.nir.shopify.admin.paging.PagingAndSortingHelper;
@@ -59,10 +60,10 @@ public class BrandController {
 			brand.setLogo(fileName);
 			
 			Brand savedBrand = brandService.save(brand);
-			String uploadDir = "../brand-logos/" + savedBrand.getId();
+			String uploadDir = "brand-logos/" + savedBrand.getId();
 			
-			FileUploadUtil.cleanDir(uploadDir);
-			FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+			AmazonS3Util.removeFolder(uploadDir);
+			AmazonS3Util.uploadFile(uploadDir, fileName, multipartFile.getInputStream());
 			
 		} else {
 			brandService.save(brand);
@@ -96,8 +97,9 @@ public class BrandController {
 			RedirectAttributes redirectAttributes) {
 		try {
 			brandService.delete(id);
-			String brandDir = "../brand-logos/" + id;
-			FileUploadUtil.removeDir(brandDir);
+			String brandDir = "brand-logos/" + id;
+			
+			AmazonS3Util.removeFolder(brandDir);
 			
 			redirectAttributes.addFlashAttribute("message", 
 					"The brand ID " + id + " has been deleted successfully");

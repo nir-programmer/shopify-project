@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
+import org.nir.shopify.admin.AmazonS3Util;
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.common.Constants;
 import org.nir.shopify.common.entity.Currency;
@@ -64,9 +64,16 @@ public class SettingController {
 			String value = "/site-logo/" + fileName;
 			settingBag.updateSiteLogo(value);
 			
-			String uploadDir = "../site-logo/";
-			FileUploadUtil.cleanDir(uploadDir);
-			FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+			//String uploadDir = "../site-logo/";
+			String uploadDir = "site-logo";
+			
+			AmazonS3Util.removeFolder(uploadDir);
+			AmazonS3Util.uploadFile(uploadDir, fileName, multipartFile.getInputStream());
+			
+			/*
+			 * FileUploadUtil.cleanDir(uploadDir); FileUploadUtil.saveFile(uploadDir,
+			 * fileName, multipartFile);
+			 */
 		}
 	}
 	

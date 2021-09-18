@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.nir.shopify.admin.AmazonS3Util;
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.admin.UserNotFoundException;
 import org.nir.shopify.admin.paging.PagingAndSortingHelper;
@@ -71,8 +72,14 @@ public class UserController {
 			
 			String uploadDir = "user-photos/" + savedUser.getId();
 			
-			FileUploadUtil.cleanDir(uploadDir);
-			FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+			
+			AmazonS3Util.removeFolder(uploadDir);
+			AmazonS3Util.uploadFile(uploadDir, fileName, multipartFile.getInputStream());
+			
+			/*
+			 * FileUploadUtil.cleanDir(uploadDir); FileUploadUtil.saveFile(uploadDir,
+			 * fileName, multipartFile);
+			 */
 			
 		} else {
 			if (user.getPhotos().isEmpty()) user.setPhotos(null);
@@ -114,7 +121,12 @@ public class UserController {
 			Model model,
 			RedirectAttributes redirectAttributes) {
 		try {
-			service.delete(id);;
+			service.delete(id);
+			
+			String userPhotosDir = "user-photos/" + id; 
+			AmazonS3Util.removeFolder(userPhotosDir);
+			
+			
 			redirectAttributes.addFlashAttribute("message", 
 					"The user ID " + id + " has been deleted successfully");
 		} catch (UserNotFoundException ex) {

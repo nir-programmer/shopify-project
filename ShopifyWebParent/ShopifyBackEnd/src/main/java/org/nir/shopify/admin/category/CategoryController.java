@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.nir.shopify.admin.AmazonS3Util;
 import org.nir.shopify.admin.FileUploadUtil;
 import org.nir.shopify.common.entity.Category;
 import org.nir.shopify.common.exception.CategoryNotFoundException;
@@ -84,10 +85,13 @@ public class CategoryController {
 			category.setImage(fileName);
 
 			Category savedCategory = service.save(category);
-			String uploadDir = "../category-images/" + savedCategory.getId();
+			//String uploadDir = "../category-images/" + savedCategory.getId();
+			String uploadDir = "category-images/" + savedCategory.getId();
 			
-			FileUploadUtil.cleanDir(uploadDir);
-			FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+			AmazonS3Util.removeFolder(uploadDir);
+			AmazonS3Util.uploadFile(uploadDir, fileName, multipartFile.getInputStream());
+			
+			
 		} else {
 			service.save(category);
 		}
@@ -131,8 +135,11 @@ public class CategoryController {
 			RedirectAttributes redirectAttributes) {
 		try {
 			service.delete(id);
-			String categoryDir = "../category-images/" + id;
-			FileUploadUtil.removeDir(categoryDir);
+			//String categoryDir = "../category-images/" + id;
+			String categoryDir = "category-images/" + id;
+			
+			//FileUploadUtil.removeDir(categoryDir);
+			AmazonS3Util.removeFolder(categoryDir);
 			
 			redirectAttributes.addFlashAttribute("message", 
 					"The category ID " + id + " has been deleted successfully");

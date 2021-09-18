@@ -16,7 +16,7 @@ public class AmazonS3UtilTests
 	{
 		//Given
 		//String folderName = "product-images/18"; 
-		String folderName = "test-upload"; 
+		String folderName = "product-images/10/"; 
 		
 		//WHEN
 		List<String> listKeys = AmazonS3Util.listFolder(folderName);
