@@ -11,30 +11,28 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MvcConfig implements WebMvcConfigurer {
 
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		exposeDirectory("../category-images", registry);
-		exposeDirectory("../brand-logos", registry);
-		exposeDirectory("../product-images", registry);
-		exposeDirectory("../site-logo", registry);
-	}
-
-	private void exposeDirectory(String pathPattern, ResourceHandlerRegistry registry) 
-	{
-		//The prefix path of the current OS file system
-		String pathPrefix = getPathPrefix();
-		System.err.println("Path Prefix : " + pathPrefix);
-		
-		Path path = Paths.get(pathPattern);
-		String absolutePath = path.toFile().getAbsolutePath();
-		
-		String logicalPath = pathPattern.replace("../", "") + "/**";
-				
-		registry.addResourceHandler(logicalPath)
-			.addResourceLocations(pathPrefix + absolutePath + "/");	
-		
-		
-	}
+	/*
+	 * @Override public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	 * exposeDirectory("../category-images", registry);
+	 * exposeDirectory("../brand-logos", registry);
+	 * exposeDirectory("../product-images", registry);
+	 * exposeDirectory("../site-logo", registry); }
+	 * 
+	 * private void exposeDirectory(String pathPattern, ResourceHandlerRegistry
+	 * registry) { //The prefix path of the current OS file system String pathPrefix
+	 * = getPathPrefix(); System.err.println("Path Prefix : " + pathPrefix);
+	 * 
+	 * Path path = Paths.get(pathPattern); String absolutePath =
+	 * path.toFile().getAbsolutePath();
+	 * 
+	 * String logicalPath = pathPattern.replace("../", "") + "/**";
+	 * 
+	 * registry.addResourceHandler(logicalPath) .addResourceLocations(pathPrefix +
+	 * absolutePath + "/");
+	 * 
+	 * 
+	 * }
+	 */
 	
 	
 	private String getPathPrefix() {
