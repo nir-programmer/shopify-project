@@ -1,12 +1,16 @@
 server:
   port: 8080
-  servlet:
-    context-path: /Shopify
+#  servlet:
+    #context-path: /Shopify
 spring:
   datasource:
     password: superduper100
     url: jdbc:mysql://localhost:3306/shopify_db
     username: root
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 2
+    
   jpa:
     hibernate:
       ddl-auto: update
