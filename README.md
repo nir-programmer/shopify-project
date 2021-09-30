@@ -23,7 +23,7 @@
         Use Must have a credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
         You can use the Admin credentials which will give you a full controll to perform any operation: 
          -  username: githubadmin@gmail.com
-         -  password: github2021
+         -  password: github2021.
         
    Follow the URL: [ShopifyBackEnd](https://shopify-admin-app.herokuapp.com/)
    
@@ -33,6 +33,7 @@
          -  username: githubcustomer@gmail.com
          -  password: github2021
         
+        Alternatively you can use your own Facebook or Google accounts to login.
         
    Follow the URL: [ShopifyFrontEnd](https://shopify-frontend-app.herokuapp.com/)
    
