@@ -58,7 +58,7 @@
    <img src="documents/images/shopify-backend/login/shopify-admin-login-page.png" width=800 height=400 />
    </center>
 
-    Use can use the following credentials to access the application.
+Use can use the following credentials to access the application.
          -  username: githubadmin@gmail.com
          -  password: github2021
 
@@ -66,11 +66,9 @@
     You can use the Admin credentials which will give you a full controll to perform any operation: 
          -  username: githubadmin@gmail.com
          -  password: github2021.
-   
-
    <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
 
-         
+   
    <center>
    <img src="documents/images/shopify-backend/login/shopify-admin-home-page-after-login.png" width=800 height=400 />
    </center>
@@ -78,32 +76,8 @@
         
    Now follow  the URL: admin.shopify100.com to access the ShopifyBackEnd application
 
+   The ShopifyBackEnd application is running [https://admin.shopify100.com](https://admin.shopify100.com)
 
-   
-        
-  
-   
-
-  
-    
-   
-   
-  
-   
-   
-
-   <img src="documents/images/shopify-admin/Screenshot from 2021-09-30 16-20-58.png" width=400 height=200 />
- 
-
-      The ShopifyBackEnd : 
-        Use can use the following credentials to access the application 
-         -  username: github_customer
-         -  password: github2021
-        
-        and follow the URL: shopify.com
-         
-      
-      
 
    ## Features
    -  [IMPORTANT: Complete Description of the features](DOCUMENTS/Shopify-Project/shopify-user-requirements/Shopify-Website-Data-Requirements.md)
@@ -153,7 +127,7 @@ to perform the following key operations:
 
   The 2 applications are up and running on the Heroku Cloud ploatform.
   
-   The ShopifyBackEnd application is running [https://admin.shopify100.com](https://admin.shopify100.com)
+The ShopifyBackEnd application is running [https://admin.shopify100.com](https://admin.shopify100.com)
 
    username: githubuser, and password: github2021
       
