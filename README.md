@@ -10,15 +10,113 @@
 
 # Shopify: Spring Boot Ecommerce Web Application  [![Build Status](https://travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master)](https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template)
 
+    This project is a fully featured website built for an E-commerce company.
+    The project contains 2 separate maven projects (modules) :
+      -  ShopifyBackEnd: used by the employees of the company that manage the system.
+      -  ShopifyFrontEnd: Used by the Customers/Visitors of the website.
+    The Application is used by 2 types of users: 
+      -  The employees of the company that maintain the website.
+      -  The Customers/Visitors of the website.
 
-   shopify-project is a Spring Boot Web application built for a FICTIONAL e-commerce company named Shopify.\
-   The application is used by 2 major types of users.\
-   First -  the Shopify's employees with their different roles.\
-   Second -  the Shopify's Customers/Visitors.\
-   For these reason 
-   In order to implement the employees requirements and the customer/visitor requirements in a modular way  the project is actually compoased by 2 projects:
+   ## Access the 2 running applications on Heroku
+   ### ShopifyBackEnd
+        Use Must have a credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
+        You can use the Admin credentials which will give you a full controll to perform any operation: 
+         -  username: githubadmin@gmail.com
+         -  password: github2021
+        
+   Follow the URL: [ShopifyBackEnd](https://shopify-admin-app.herokuapp.com/)
+   
+
+   ### ShopifyFrontEnd
+        Use can use the following credentials to access the application.
+         -  username: githubcustomer@gmail.com
+         -  password: github2021
+        
+        
+   Follow the URL: [ShopifyFrontEnd](https://shopify-frontend-app.herokuapp.com/)
+   
+   
+
+      The ShopifyBackEnd : 
+        Use can use the following credentials to access the application 
+         -  username: github_customer
+         -  password: github2021
+        
+        and follow the URL: shopify.com
+         
+      
+      
+
+   ## Features
+   -  [IMPORTANT: Complete Description of the features](DOCUMENTS/Shopify-Project/shopify-user-requirements/Shopify-Website-Data-Requirements.md)
+   
+   ### Users: Based on the requirements of the Users(Admins,Editors,Shippers,Sales Peson, and Assistence) 
+   ### The application will implement the following features:
+
+     -  Manage admin users
+     -  Manage categories
+     -  Manage brands
+     -  Manage products
+     -  Manage admin site settings
+     -  Manage categories
+
+   ### Customers: Based on the requirements 
+
+      Manage books
+      Manage customers
+      Manage reviews (but cannot write reviews)
+      Manage orders (but cannot create orders)
+      View statistical information
+
+
+   
+## Shopify Back End
+   A Spring Boot Web MVC Application that exposes to the maintainers of the system a 
+   fully featured website as well as REST API (Using Spring REST) that implements the following main key features to manage: 
+   users, products, categories, customers, website settings, orders 
+   Secured Access for various Roles in the System.
+   Persist Data into a Database.
+
+Shopify Front End: 
+A Spring Boot Web MVC Application that provides the Customers/Visitors of the system a 
+to perform the following key operations: 
+•	Manage Accounts, Shopping Carts and 
+•	Perform Payments: Using PayPal/Credit Card/Cash
+	
+	Key Technologies used in the projects: 
+•	Java, Java Script
+•	Spring Boot, Spring Security, Spring Data, Spring MVC, Spring REST, Hibernate
+•	HTML, CSS, jQuery, Bootstrap, Thymeleaf
+•	MySQL
+•	Heroku (Deployment), AWS (S3 Service)
+•	Maven
+•	Third Party APIs Integrations: PayPal, Google and Face Book (OAuth2 API)
+
+
+  The 2 applications are up and running on the Heroku Cloud ploatform.
+  
+   The ShopifyBackEnd application is running [https://admin.shopify100.com](https://admin.shopify100.com)
+
+   username: githubuser, and password: github2021
       
   
+View new books, best-selling books, and most favored books on the home page
+Search for books
+View books listed by category
+View book’s details and reviews
+Write reviews for books
+Order books
+Check their order status and shopping history
+They must register to write review and purchase books
+
+- [User Management Module](documents/USER_MANAGEMENTS.MD):
+- [User Authentication Module](documents/USER_AUTHENTICATION.MD):
+
+- [User Profiles](documents/USER_PROFILES.MD)   
+- [User Roles](documents/USER_ROLES.MD)   
+- [API](documents/API.md)  
+- [Internationalization (i18n)](documents/INTERNATIONALIZATION.MD) 
 
 
 <!-- APPLICATION SCREENSHOTS -->
