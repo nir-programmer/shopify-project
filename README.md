@@ -18,25 +18,68 @@
       -  The employees of the company that maintain the website.
       -  The Customers/Visitors of the website.
 
-   ## Access the 2 running applications on Heroku
+   ## Access the ShopifyFrontEnd application on Heroku
 
-   ### ShopifyFrontEnd
-        Use can use the following credentials to access the application.
+    The first screen you will see is the home page of the shopify-front-end application: 
+
+   <center>
+   <img src="documents/images/shopify-frontend/login/shopme-frontend-homepage-before-login.png" width=800 height=400 />
+   </center>
+
+         At this point, you are a "visitor". 
+         You can login by clicking the link on the right side of the control panel-you will see the login page: 
+         
+
+   <center>
+   <img src="documents/images/shopify-frontend/login/shopify-frontend-login-page.png" width=800 height=400 />
+   </center>
+
+         Use can use the following credentials to access the application.
          -  username: githubcustomer@gmail.com
          -  password: github2021
-        
-        Alternatively you can use your own Facebook or Google accounts in order to login
-        
-   Now follow the URL: shopify100.com 
+   
+         Alternatively - You can login by using your own Google or Facebook accounts.
 
 
-   ### ShopifyBackEnd
-        Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
-        You can use the Admin credentials which will give you a full controll to perform any operation: 
+
+<b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user naem on the top left corner:
+<center>
+ <img src="documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
+</center>
+
+<br/>
+
+
+## Access the ShopifyBackEnd application on Heroku
+
+    The first screen you will see is login page of the shopify-back-end application: 
+
+   <center>
+   <img src="documents/images/shopify-backend/login/shopify-admin-login-page.png" width=800 height=400 />
+   </center>
+
+    Use can use the following credentials to access the application.
+         -  username: githubadmin@gmail.com
+         -  password: github2021
+
+    Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
+    You can use the Admin credentials which will give you a full controll to perform any operation: 
          -  username: githubadmin@gmail.com
          -  password: github2021.
    
-   Follow the URL: admin.shopify100.com
+
+   <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
+
+         
+   <center>
+   <img src="documents/images/shopify-backend/login/shopify-admin-home-page-after-login.png" width=800 height=400 />
+   </center>
+
+        
+   Now follow  the URL: admin.shopify100.com to access the ShopifyBackEnd application
+
+
+   
         
   
    
@@ -47,7 +90,7 @@
    
   
    
-   <img src="documents/images/shopify-admin/Screenshot from 2021-09-30 16-20-58.png" width=400 height=200 />
+   
 
    <img src="documents/images/shopify-admin/Screenshot from 2021-09-30 16-20-58.png" width=400 height=200 />
  
