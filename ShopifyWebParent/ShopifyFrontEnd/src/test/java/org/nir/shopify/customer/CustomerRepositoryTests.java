@@ -165,6 +165,8 @@ public class CustomerRepositoryTests {
 		boolean matches = passwordEncoder.matches(rawPassword, encodedPassword);
 		
 		assertThat(matches).isTrue();
+		//$2a$10$Hpzf7VQ0DncM9Q8cpoqx9.V4repsStiYjKvxnlkhmo8SGUl6z3OqG
+		//$2a$10$Ii6l.5dh5Frpg3W8oNImyu4OwVWNuV2H6uc6hWjqMIE6gcVSjh5H
 		
 	}
 }

@@ -19,25 +19,38 @@
       -  The Customers/Visitors of the website.
 
    ## Access the 2 running applications on Heroku
-   ### ShopifyBackEnd
-        Use Must have a credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
-        You can use the Admin credentials which will give you a full controll to perform any operation: 
-         -  username: githubadmin@gmail.com
-         -  password: github2021.
-        
-   Follow the URL: [ShopifyBackEnd](https://shopify-admin-app.herokuapp.com/)
-   
 
    ### ShopifyFrontEnd
         Use can use the following credentials to access the application.
          -  username: githubcustomer@gmail.com
          -  password: github2021
         
-        Alternatively you can use your own Facebook or Google accounts to login.
+        Alternatively you can use your own Facebook or Google accounts in order to login
         
-   Follow the URL: [ShopifyFrontEnd](https://shopify-frontend-app.herokuapp.com/)
+   Now follow the URL: shopify100.com 
+
+
+   ### ShopifyBackEnd
+        Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
+        You can use the Admin credentials which will give you a full controll to perform any operation: 
+         -  username: githubadmin@gmail.com
+         -  password: github2021.
+   
+   Follow the URL: admin.shopify100.com
+        
+  
+   
+
+  
+    
    
    
+  
+   
+   <img src="documents/images/shopify-admin/Screenshot from 2021-09-30 16-20-58.png" width=400 height=200 />
+
+   <img src="documents/images/shopify-admin/Screenshot from 2021-09-30 16-20-58.png" width=400 height=200 />
+ 
 
       The ShopifyBackEnd : 
         Use can use the following credentials to access the application 
