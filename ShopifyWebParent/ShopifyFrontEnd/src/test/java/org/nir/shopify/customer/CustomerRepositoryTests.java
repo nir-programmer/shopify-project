@@ -14,6 +14,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.annotation.Rollback;
 
 @DataJpaTest
@@ -149,5 +150,21 @@ public class CustomerRepositoryTests {
 		Customer customer = repo.findById(id).get();
 
 		assertThat(customer.getAuthenticationType()).isEqualTo(AuthenticationType.DATABASE);
+	}
+	
+	//Create a password from github2021
+	@Test
+	public void generatePasswordForCustomerOnHeroku()
+	{
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String rawPassword = "github2021";
+		String encodedPassword = passwordEncoder.encode(rawPassword);
+		
+		System.out.println(encodedPassword);
+		
+		boolean matches = passwordEncoder.matches(rawPassword, encodedPassword);
+		
+		assertThat(matches).isTrue();
+		
 	}
 }
