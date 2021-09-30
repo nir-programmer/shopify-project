@@ -58,14 +58,29 @@
    <img src="documents/images/shopify-backend/login/shopify-admin-login-page.png" width=800 height=400 />
    </center>
 
+Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
+You can use the Admin credentials which will give you a full controll to perform any operation: 
+         -  username: githubadmin@gmail.com
+         -  password: github2021.
+
+|     Username          | Password   |     Role     |
+|-----------------------|------------|--------------|
+|`githubadmin@gmail.com`|`github2021`|  `Admin`     |
+
 Use can use the following credentials to access the application.
          -  username: githubadmin@gmail.com
          -  password: github2021
 
-    Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
-    You can use the Admin credentials which will give you a full controll to perform any operation: 
-         -  username: githubadmin@gmail.com
-         -  password: github2021.
+
+|     Username     | Password |     Role     |
+|------------------|----------|--------------|
+|`johndoe`         |`password`|`PERSON`      |
+|`janedoe`         |`password`|`PERSON`      |
+|`Admin1`          |`password`|`ADMIN`       |
+|`Admin2`          |`password`|`ADMIN`       |
+|`AdminTrainee1`   |`password`|`ADMINTRAINEE`|
+|`AdminTrainee2`   |`password`|`ADMINTRAINEE`|
+    
    <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
 
    
