@@ -17,6 +17,7 @@
 		Authentication and Authorization.
 		Management of Employee and Customer accounts, Products, Brands, Categories, Site Settings,
 		and Orders.
+   
 
 •	The Customers (and visitors): can perform the following operations: 
 		Authentication and Authorization.
