@@ -24,6 +24,37 @@ A complete Java Spring Boot Web application for an online e-shop.
 		Make a payment via PayPal, Credit Card or Cash.
 		Tracking their orders.	
 
+
+## Access the ShopifyBackEnd application on Heroku
+
+    The first screen you will see is login page of the shopify-back-end application: 
+
+   <center>
+   <img src="documents/images/shopify-backend/login/shopify-admin-login-page.png" width=800 height=400 />
+   </center>
+
+<br/>
+<br>
+Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
+The credentials below(user name and password) will give you full access to application
+        
+
+|     Username          | Password   |     Role     |
+|-----------------------|------------|--------------|
+|`githubadmin@gmail.com`|`github2021`|  `Admin`     |
+
+    
+   <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
+
+   
+   <center>
+   <img src="documents/images/shopify-backend/login/shopify-admin-home-page-after-login.png" width=800 height=400 />
+   </center>
+
+        
+   Now follow  the URL: admin.shopify100.com to access the ShopifyBackEnd application
+
+   The ShopifyBackEnd application is running [https://admin.shopify100.com](https://admin.shopify100.com)
 Features include but not limited to:
 
 - [Authentication](documents/AUTHENTICATION.MD)  
