@@ -45,7 +45,7 @@
    </br>
 
    <center>
-   <img src="documents/images/shopify-frontend/login/shopme-frontend-homepage-before-login.png" width=800 height=400 />
+   <img src="documents/images/shopify-frontend/login/documents/images/shopify-frontend/login/shopme-frontend-homepage-before-login.png" width=800 height=400 />
    </center>
 
    </br>
@@ -86,7 +86,7 @@ Alternatively - If you are not a registered customer - you can still login by us
 <br/>
    
    <center>
-   <img src="documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
+   <img src="documents/images/shopify-frontend/login/documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
    </center>
 
 <br/>
