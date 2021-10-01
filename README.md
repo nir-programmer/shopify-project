@@ -68,9 +68,9 @@
    <br/>
 
 
-                                                            |     Username             |   Password      |  
-                                                            |--------------------------|-----------------|
-                                                            |`githubcustomer@gmail.com`|  `github2021`   |
+                                            |     Username             |   Password      |  
+                                            |--------------------------|-----------------|
+                                            |`githubcustomer@gmail.com`|  `github2021`   |
          
       
   <br/>       
@@ -112,9 +112,9 @@ Alternatively - If you are not a registered customer - you can still login by us
    <br/>
    <br/>  
 
-                                                         |     Username          | Password   |     Role     |
-                                                         |-----------------------|------------|--------------|
-                                                         |`githubadmin@gmail.com`|`github2021`|  `Admin`     |
+                                           |     Username          | Password   |     Role     |
+                                           |-----------------------|------------|--------------|
+                                           |`githubadmin@gmail.com`|`github2021`|  `Admin`     |
 
     
    <b>Congradiulations!</b> You are logged in succesfully to the ShopifyBackEnd applicatoin
