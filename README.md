@@ -10,6 +10,19 @@
 
 # Shopify: [![Build Status](https://travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master)](https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template)
 
+A complete Java Spring Boot Web application for an online e-shop.
+    The app is used by employees and customers and provides the following key features (API):
+	
+•	The Employees (admin users) can perform the following operations
+		Authentication and Authorization.
+		Management of Employee and Customer accounts, Products, Brands, Categories, Site Settings,
+		and Orders.
+
+•	The Customers (and visitors): can perform the following operations: 
+		Authentication and Authorization.
+		Managing their accounts.
+		Make a payment via PayPal, Credit Card or Cash.
+		Tracking their orders.	
 Features include but not limited to:
 
 - [Authentication](documents/AUTHENTICATION.MD)  
