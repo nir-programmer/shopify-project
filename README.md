@@ -35,9 +35,9 @@
 - Tracking their orders.	
   
 	
-### Quick Start: How to get into the 2 apps that run on Heroku cloud platrform?
+## Quick Start: How to get into the 2 apps that run on Heroku cloud platrform?
 
-#### ShopifyFrontEndProject - Instructions
+### ShopifyFrontEndProject - Instructions
 
    Follow  the URL: shopify100.com to access the ShopifyFrontEnd application.\
    The first screen you will see is the home page:
@@ -68,23 +68,34 @@
    <br/>
 
 
-   |     Username             |   Password      |  
-   |--------------------------|-----------------|
-   |`githubcustomer@gmail.com`|  `github2021`   |
+                                                            |     Username             |   Password      |  
+                                                            |--------------------------|-----------------|
+                                                            |`githubcustomer@gmail.com`|  `github2021`   |
          
-         
-         
+      
+  <br/>       
    
-Alternatively - You can login by using your own Google or Facebook accounts from the login page.
+Alternatively - If you are not a registered customer - you can still login by using your own Google or Facebook accounts from the login page.
 
 <br/>
 
-<b>Congradiulations!</b> You are logged in succesfully!
+<br/> 
+ <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
 
-#### ShopifyBackEnd Project - Instructions
+<br/>
+<br/>
+   
+   <center>
+   <img src="documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
+   </center>
+
+<br/>
+<br/>
+
+### ShopifyBackEnd Project - Instructions
 
    Follow the URL: admin.shopify100.com to access the ShopifyFrontEnd application.\
-   The first screen you will see is the home page:
+   The first screen you will see is the admin login page:
    </br>
    </br>
 
@@ -95,155 +106,36 @@ Alternatively - You can login by using your own Google or Facebook accounts from
 
    </br>
    <br/>
-   Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
-   The credentials below(user name and password) will give you full access to application
+   Use Must have credentials of some Role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
+   <br/>
+   Use the following Credentials to login as an admin user in order to get full controll:
+   <br/>
    <br/>  
 
-   |     Username          | Password   |     Role     |
-   |-----------------------|------------|--------------|
-   |`githubadmin@gmail.com`|`github2021`|  `Admin`     |
+                                                         |     Username          | Password   |     Role     |
+                                                         |-----------------------|------------|--------------|
+                                                         |`githubadmin@gmail.com`|`github2021`|  `Admin`     |
 
     
-   <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
+   <b>Congradiulations!</b> You are logged in succesfully to the ShopifyBackEnd applicatoin
+    <br/>
+      <b>NOTE:</b> This is the admin hompepage after clicking on the "products" link in order the view the ilst of all proudcts
+      
 
    <br/>
    <br/>
-
+  
    <center>
-            <img src="documents/images/shopify-frontend/login/shopify-frontend-login-page.png" width=800 height=400 />
+            <img src="documents/images/shopify-backend/login/shopify-admin-home-page-after-login.png" width=800 height=400 />
     </center>
+
+   <br/>
+   
 
    <br/>
    <br/>     
 
-   Use the following Credentials to login: 
-   <br/>
-
-
-   |     Username             |   Password      |  
-   |--------------------------|-----------------|
-   |`githubcustomer@gmail.com`|  `github2021`   |
-         
-         
-         
    
-Alternatively - You can login by using your own Google or Facebook accounts from the login page.
-
-<br/>
-
-<b>Congradiulations!</b> You are logged in succesfully!
-<center>
- <img src="documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
-</center>
-<center>
- <img src="documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
-</center>
-
-<br/>
-<br/>
-
-## Access the ShopifyBackEnd application on Heroku
-
-    The first screen you will see is login page of the shopify-back-end application: 
-
-   <center>
-   <img src="documents/images/shopify-backend/login/shopify-admin-login-page.png" width=800 height=400 />
-   </center>
-
-<br/>
-<br>
-Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
-The credentials below(user name and password) will give you full access to application
-        
-
-|     Username          | Password   |     Role     |
-|-----------------------|------------|--------------|
-|`githubadmin@gmail.com`|`github2021`|  `Admin`     |
-
-    
-   <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
-
-   
-   <center>
-   <img src="documents/images/shopify-backend/login/shopify-admin-home-page-after-login.png" width=800 height=400 />
-   </center>
-
-        
-   Now follow  the URL: admin.shopify100.com to access the ShopifyBackEnd application
-
-   The ShopifyBackEnd application is running [https://admin.shopify100.com](https://admin.shopify100.com)
-
-
-   ## Features
-   -  [IMPORTANT: Complete Description of the features](DOCUMENTS/Shopify-Project/shopify-user-requirements/Shopify-Website-Data-Requirements.md)
-   
-   ### Users: Based on the requirements of the Users(Admins,Editors,Shippers,Sales Peson, and Assistence) 
-   ### The application will implement the following features:
-
-     -  Manage admin users
-     -  Manage categories
-     -  Manage brands
-     -  Manage products
-     -  Manage admin site settings
-     -  Manage categories
-
-   ### Customers: Based on the requirements 
-
-      Manage books
-      Manage customers
-      Manage reviews (but cannot write reviews)
-      Manage orders (but cannot create orders)
-      View statistical information
-
-
-   
-## Shopify Back End
-   A Spring Boot Web MVC Application that exposes to the maintainers of the system a 
-   fully featured website as well as REST API (Using Spring REST) that implements the following main key features to manage: 
-   users, products, categories, customers, website settings, orders 
-   Secured Access for various Roles in the System.
-   Persist Data into a Database.
-
-Shopify Front End: 
-A Spring Boot Web MVC Application that provides the Customers/Visitors of the system a 
-to perform the following key operations: 
-•	Manage Accounts, Shopping Carts and 
-•	Perform Payments: Using PayPal/Credit Card/Cash
-	
-	Key Technologies used in the projects: 
-•	Java, Java Script
-•	Spring Boot, Spring Security, Spring Data, Spring MVC, Spring REST, Hibernate
-•	HTML, CSS, jQuery, Bootstrap, Thymeleaf
-•	MySQL
-•	Heroku (Deployment), AWS (S3 Service)
-•	Maven
-•	Third Party APIs Integrations: PayPal, Google and Face Book (OAuth2 API)
-
-
-  The 2 applications are up and running on the Heroku Cloud ploatform.
-  
-The ShopifyBackEnd application is running [https://admin.shopify100.com](https://admin.shopify100.com)
-
-   username: githubuser, and password: github2021
-      
-  
-View new books, best-selling books, and most favored books on the home page
-Search for books
-View books listed by category
-View book’s details and reviews
-Write reviews for books
-Order books
-Check their order status and shopping history
-They must register to write review and purchase books
-
-- [User Management Module](documents/USER_MANAGEMENTS.MD):
-- [User Authentication Module](documents/USER_AUTHENTICATION.MD):
-
-- [User Profiles](documents/USER_PROFILES.MD)   
-- [User Roles](documents/USER_ROLES.MD)   
-- [API](documents/API.md)  
-- [Internationalization (i18n)](documents/INTERNATIONALIZATION.MD) 
-
 
 <!-- APPLICATION SCREENSHOTS -->
 ## Application screenshots
