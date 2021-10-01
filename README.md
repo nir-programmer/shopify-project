@@ -23,6 +23,7 @@ A complete Java Spring Boot Web application for an online e-shop.
 		Managing their accounts.
 		Make a payment via PayPal, Credit Card or Cash.
 		Tracking their orders.	
+
 Features include but not limited to:
 
 - [Authentication](documents/AUTHENTICATION.MD)  
