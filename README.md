@@ -8,15 +8,21 @@
 -->
 
 
-# Shopify: Spring Boot Ecommerce Web Application  [![Build Status](https://travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master)](https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template)
+# Shopify[![Build Status](https://travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master)](https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template)
 
-    This project is a fully featured website built for an E-commerce company.
-    The project contains 2 separate maven projects (modules) :
-      -  ShopifyBackEnd: used by the employees of the company that manage the system.
-      -  ShopifyFrontEnd: Used by the Customers/Visitors of the website.
-    The Application is used by 2 types of users: 
-      -  The employees of the company that maintain the website.
-      -  The Customers/Visitors of the website.
+    A complete Java Spring Boot Web application for an online e-shop.
+    The app is used by employees and customers and provides the following key features (API):
+	
+•	The Employees (admin users) can perform the following operations
+		Authentication and Authorization.
+		Management of Employee and Customer accounts, Products, Brands, Categories, Site Settings,
+		and Orders.
+
+•	The Customers (and visitors): can perform the following operations: 
+		Authentication and Authorization.
+		Managing their accounts.
+		Make a payment via PayPal, Credit Card or Cash.
+		Tracking their orders.	
 
    ## Access the ShopifyFrontEnd application on Heroku
 
@@ -59,7 +65,7 @@
    </center>
 
 <br/>
-<br/>
+<br>
 Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
 The credentials below(user name and password) will give you full access to application
         
