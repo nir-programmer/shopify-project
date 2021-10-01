@@ -1,14 +1,7 @@
-<!--
-*** Thanks for checking out Spring Boot Application Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again!
 
 
--->
 
-
-# Shopify [![Build Status](https://travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master)](https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template)
+# Shopify 
 
 ## Overview
    Shopify is a complete Java Spring Boot Web application for an online e-shop.
@@ -35,12 +28,12 @@
 - Tracking their orders.	
   
 	
-## Quick Start: How to get into the 2 apps that run on Heroku cloud platrform?
+## Quick Start: How to access the 2 deployed apps on Heroku cloud platrform?
 
-### ShopifyFrontEndProject - Instructions
+### Access to the ShopifyFrontEndProject - Instructions
 
-   Follow  the URL: shopify100.com to access the ShopifyFrontEnd application.\
-   The first screen you will see is the home page:
+   Open the home page By clicking on the following link: [ShopifyFrontEnd Home Page ](https://shopify100.com) \
+   Yod will see the following page:
    </br>
    </br>
 
@@ -92,10 +85,10 @@ Alternatively - If you are not a registered customer - you can still login by us
 <br/>
 <br/>
 
-### ShopifyBackEnd Project - Instructions
+### Access to the ShopifyBackEndProject - Instructions
 
-   Follow the URL: admin.shopify100.com to access the ShopifyFrontEnd application.\
-   The first screen you will see is the admin login page:
+   Open the login page By clicking on the following link: [ShopifyBackEnd Login Page ](https://admin.shopify100.com) \
+   Yod will see the following page: 
    </br>
    </br>
 
@@ -136,7 +129,7 @@ Alternatively - If you are not a registered customer - you can still login by us
    <br/>     
 
    
-   [Access the ShopifyBackEnd applicatio](https://admin.shopify100.com)
+  
 
 <!-- APPLICATION SCREENSHOTS -->
 ## Application screenshots
