@@ -8,54 +8,139 @@
 -->
 
 
-# Shopify[![Build Status](https://travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master)](https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template)
+# Shopify [![Build Status](https://travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master)](https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template)
 
-    A complete Java Spring Boot Web application for an online e-shop.
-    The app is used by employees and customers and provides the following key features (API):
-	
-•	The Employees (admin users) can perform the following operations
-		Authentication and Authorization.
-		Management of Employee and Customer accounts, Products, Brands, Categories, Site Settings,
-		and Orders.
+## Overview
+   Shopify is a complete Java Spring Boot Web application for an online e-shop.
+   The app is used by employees and customers.
+   The app itself consists of two sub-maven modules(projects) 
+<!---ADD LINK TO ROLES-->
+1. ShopifyBackEnd Project - used by the company employees with their various Roles.
+2. ShopifyFrontEnd Project - used by customers(and visitors) of the shop's website.
    
+### ShopifyBackEnd Project- Main Features:
+- Authentication and Authorization.
+- Manage Employees and Customers Accounts
+- Manage Products
+- Manage Brands
+- Manage Categories
+- Manage Brands
+- Manage settings
+- Manage Orders
 
-•	The Customers (and visitors): can perform the following operations: 
-		Authentication and Authorization.
-		Managing their accounts.
-		Make a payment via PayPal, Credit Card or Cash.
-		Tracking their orders.	
+### ShopifyFrontEndProject- Main Features:
+- Authentication and Authorization.
+- Managing their accounts.
+- Make a payment via PayPal, Credit Card or Cash.
+- Tracking their orders.	
+  
+	
+### Quick Start: How to get into the 2 apps that run on Heroku cloud platrform?
 
-   ## Access the ShopifyFrontEnd application on Heroku
+#### ShopifyFrontEndProject - Instructions
 
-    The first screen you will see is the home page of the shopify-front-end application: 
+   Follow  the URL: shopify100.com to access the ShopifyFrontEnd application.\
+   The first screen you will see is the home page:
+   </br>
+   </br>
 
    <center>
    <img src="documents/images/shopify-frontend/login/shopme-frontend-homepage-before-login.png" width=800 height=400 />
    </center>
 
-         At this point, you are a "visitor". 
-         You can login by clicking the link on the right side of the control panel-you will see the login page: 
-         
+   </br>
+   <br/>
+   At this point, you are a "visitor".
+   You can login to the app as an existed customer by clicking on the "login" link on the top right corner of the home page.
+   You will see the the login page: 
+
+   <br/>
+   <br/>
 
    <center>
-   <img src="documents/images/shopify-frontend/login/shopify-frontend-login-page.png" width=800 height=400 />
-   </center>
+            <img src="documents/images/shopify-frontend/login/shopify-frontend-login-page.png" width=800 height=400 />
+    </center>
 
-         Use can use the following credentials to access the application.
-         -  username: githubcustomer@gmail.com
-         -  password: github2021
+   <br/>
+   <br/>     
+
+   Use the following Credentials to login: 
+   <br/>
+
+
+   |     Username             |   Password      |  
+   |--------------------------|-----------------|
+   |`githubcustomer@gmail.com`|  `github2021`   |
+         
+         
+         
    
-         Alternatively - You can login by using your own Google or Facebook accounts.
+Alternatively - You can login by using your own Google or Facebook accounts from the login page.
+
+<br/>
+
+<b>Congradiulations!</b> You are logged in succesfully!
+
+#### ShopifyBackEnd Project - Instructions
+
+   Follow the URL: admin.shopify100.com to access the ShopifyFrontEnd application.\
+   The first screen you will see is the home page:
+   </br>
+   </br>
+
+   <center>
+   <img src="documents/images/shopify-backend/login/shopify-admin-login-page.png" width=800 height=400 />
+   </center>
+  
+
+   </br>
+   <br/>
+   Use Must have credentials of some role(Admin, Saleperson,Editor, Shipper , Assistance) in order to access the application. 
+   The credentials below(user name and password) will give you full access to application
+   <br/>  
+
+   |     Username          | Password   |     Role     |
+   |-----------------------|------------|--------------|
+   |`githubadmin@gmail.com`|`github2021`|  `Admin`     |
+
+    
+   <b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user name on the top left corner:
+
+   <br/>
+   <br/>
+
+   <center>
+            <img src="documents/images/shopify-frontend/login/shopify-frontend-login-page.png" width=800 height=400 />
+    </center>
+
+   <br/>
+   <br/>     
+
+   Use the following Credentials to login: 
+   <br/>
 
 
+   |     Username             |   Password      |  
+   |--------------------------|-----------------|
+   |`githubcustomer@gmail.com`|  `github2021`   |
+         
+         
+         
+   
+Alternatively - You can login by using your own Google or Facebook accounts from the login page.
 
-<b>Congradiulations!</b> You are logged in succesfully to the shopify-front-end applicatoin: You will see the home page with your user naem on the top left corner:
+<br/>
+
+<b>Congradiulations!</b> You are logged in succesfully!
+<center>
+ <img src="documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
+</center>
 <center>
  <img src="documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
 </center>
 
 <br/>
-
+<br/>
 
 ## Access the ShopifyBackEnd application on Heroku
 
