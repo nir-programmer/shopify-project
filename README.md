@@ -108,7 +108,7 @@ Alternatively - If you are not a registered customer - you can still login by us
     
    <b>Congradiulations!</b> You are logged in succesfully to the ShopifyBackEnd applicatoin
     <br/>
-      <b>NOTE:</b> This is the admin hompepage after clicking on the "products" link in order the view the ilst of all proudcts
+      <b>NOTE:</b> This is the admin hompepage after clicking on the "products" link in order to view the ilst of all proudcts
       
 
    <br/>
