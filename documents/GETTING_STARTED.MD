@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-*	You need to have **MySQL** installed on your machine to run the application in **`dev`** profile. Using the `MySQL Workbench` or on any other MySQL client/console, create a database/schema named `shopify_db`. 
+*	You need to have **`MySQL`** installed on your machine to run the application in **`test`** profile. Using the `MySQL Workbench` or on any other MySQL client/console, create a database/schema named `shopify_db`. 
 
 ~~~sql
 -- create schema
@@ -40,11 +40,11 @@ DB_PASSWORD=
 If you do not wish to use environment variables. After creating the database/schema, you need to add your **MySQL** `username` and `password` in the `application-dev.properties` file on `src/main/resource`. The lines that must be modified are as follows:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/nir?useSSL=false&allowPublicKeyRetrieval=true
+spring.datasource.url=jdbc:mysql://localhost:3306/nir?useSSL=false
 spring.datasource.username=nir
 spring.datasource.password=password
 ```
-
+<!-- 
 *	To activate the accounts of registered users, an email with activation link is sent to the email provided during the user signup stage. An **SMTP** is required for the same.
 
 	[Mailtrap](https://mailtrap.io/) or any other service like **Gmail**, etc., can be used to create an SMTP.
@@ -58,7 +58,7 @@ MAIL_USERNAME=
 MAIL_PASSWORD=
 ~~~
 	
-	[dotenv-java](https://github.com/cdimascio/dotenv-java) is used to Load environment variables from the **.env** file.
+	[dotenv-java](https://github.com/cdimascio/dotenv-java) is used to Load environment variables from the **.env** file. -->
 
 
 <!-- 
