@@ -8,14 +8,15 @@
 
 *	To enable or disable **SSL** support, in the **application properties** file turn **server.ssl.enabled** to **true** or **false** -->
 Default active profile is **`test`**.
+When the application is running, **`Hibernate`** will create the tables and update if there was any change in the structrues or data in the appropriate  **`MySQL`** database.
 
 <details open="open">
 	<ul>
-		<li><a href="#running-the-application-with-ide">Running the applications with IDE</a></li>
-		<li><a href="#running-the-application-with-maven">Running the applications with Maven</a></li>
-		<li><a href="#running-the-application-with-maven">Running the applications without Maven</a></li>
-		<li>
-			<a href="#running-the-application-with-executable-jar">Running the application with Executable JAR</a>
+		<li><a href="#running-the-applications-with-ide">Running the applications with IDE</a></li>
+		<li><a href="#running-the-applications-with-maven">Running the applications with Maven</a></li>
+		<li><a href="#running-the-applications-with-maven">Running the applications without Maven</a></li>
+		<li><a href="#running-the-application-with-executable-jar">Running the application with Executable JAR</a></li>
+		<!-- <li>
 			<ul>
 				<li>
 					<a href="#accessing-data-in-h2-database">Accessing Data in H2 Database</a>
@@ -24,8 +25,8 @@ Default active profile is **`test`**.
 					</ul>
 				</li>
 			</ul>
-		</li>
-		<li><a href="#running-the-application-via-docker-container">Running the application via docker container</a></li>
+		</li> -->
+		<!-- <li><a href="#running-the-application-via-docker-container">Running the application via docker container</a></li> -->
 	</ul>
 </details>
 
@@ -112,7 +113,7 @@ $ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyBackEnd-0.0.1-SNAPSHOT
 $ git clone https://github.com/nir-programmer/shopify-project.git
 $ cd shopify-project
 $ ./mvnw package -DskipTests
-$ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyFrontEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+$ java -jar ShopifyWebParent/ShopifyFrontEnd/target/ShopifyFrontEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
 ```
 
 ### Running the application with Executable JAR
