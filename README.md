@@ -28,7 +28,7 @@
 - Tracking their orders.	
   
 	
-## Quick Start: How to access the 2 deployed apps on Heroku cloud platrform?
+## Quick Start: How to get into the 2 apps running on Heroku Cloud Platrform?
 
 ### Access to the ShopifyFrontEndProject - Instructions
 
