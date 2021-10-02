@@ -6,7 +6,7 @@
 ## Overview
    Shopify is a complete Java Spring Boot Web application for an online e-shop.
    The app is used by employees and customers.
-   The app itself consists of two sub-maven modules(projects) 
+   The app itself consists of two sub-maven modules(projects): 
 <!---ADD LINK TO ROLES-->
 1. ShopifyBackEnd Project - used by the company employees with their various Roles.
 2. ShopifyFrontEnd Project - used by customers(and visitors) of the shop's website.
@@ -129,11 +129,17 @@ Alternatively - If you are not a registered customer - you can still login by us
 
 
 
-**More [Screenshots](documents/SCREENSHOTS.MD)**
+<!-- **More [Screenshots](documents/SCREENSHOTS.MD)** -->
 
 ## Details
 
-- [Technology stack & other Open-source libraries](documents/TECHNOLOGY_STACK.MD)  
+
+- [Getting Started](documents/GETTING_STARTED.MD)  
+- [Installation](documents/INSTALLATION.MD)  
+
+   
+
+<!-- - [Technology stack & other Open-source libraries](documents/TECHNOLOGY_STACK.MD)  
 - [Technical Functionalities and To-Do](documents/TECHNICAL_FUNCTIONALITIES.MD)  
 - [Getting Started](documents/GETTING_STARTED.MD)  
 - [Architecture](documents/ARCHITECTURE.md) 
@@ -144,6 +150,6 @@ Alternatively - If you are not a registered customer - you can still login by us
 - [Changelog](documents/CHANGELOG.md) 
 - [Code Coverage](documents/CODE_COVERAGE.MD) 
 - [Documentation](documents/DOCUMENTATION.MD) 
-   
+    -->
   
 
