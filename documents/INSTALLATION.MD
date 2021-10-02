@@ -1,17 +1,19 @@
 ## Installation
 
-<!-- *	Default active profile is **`dev`**. When the application is running, **Flyway** will create the necessary tables and system data along with sample data. In the **`test`** profile, the application uses **H2** database (data in memory).
+<!-- *	Default active profile is **`test`**. When the application is running, **Flyway** will create the necessary tables and system data along with sample data. In the **`test`** profile, the application uses **H2** database (data in memory).
 
 * 	URL to access application UI: **http://localhost:8080/sbat/index** or **https://192.168.99.102:8080/sbat/index** if **SSL** is enabled.
 
 * 	Other sample profiles like **`dev`**, **`production`**, **`qa`**, and  **`staging`** are available. Change the **spring.profiles.active** property in the **application.properties** file to any of the aforementioned profiles to use it.
 
 *	To enable or disable **SSL** support, in the **application properties** file turn **server.ssl.enabled** to **true** or **false** -->
+Default active profile is **`test`**.
 
 <details open="open">
 	<ul>
-		<li><a href="#running-the-application-with-ide">Running the application with IDE</a></li>
-		<li><a href="#running-the-application-with-maven">Running the application with Maven</a></li>
+		<li><a href="#running-the-application-with-ide">Running the applications with IDE</a></li>
+		<li><a href="#running-the-application-with-maven">Running the applications with Maven</a></li>
+		<li><a href="#running-the-application-with-maven">Running the applications without Maven</a></li>
 		<li>
 			<a href="#running-the-application-with-executable-jar">Running the application with Executable JAR</a>
 			<ul>
@@ -27,7 +29,7 @@
 	</ul>
 </details>
 
-### Running the application with IDE
+### Running the applications with IDE
 
 There are several ways to run a Spring Boot application on your local machine.\
 One way is to execute the `main` method in the claass which contains the @SpringBootApplication annotation.\
@@ -48,21 +50,29 @@ Similarly, In order to run the ShopifyFrontEnd project, simply execute the main 
 * Choose the Spring Boot Application file (search for @SpringBootApplication) 
 * 	Right Click on the file and Run as Java Application
 
-### Running the application with Maven from the command line
+### Running the applications with Maven
 
-Run the following commands to build and run the 2 applications(ShopifyBackEnd and ShopifyFrontEnd) : \
+#### Running the ShopifyBackEnd application with Maven :
 
  ```shell
 $ git clone https://github.com/nir-programmer/shopify-project.git
 $ cd shopify-project
 $ mvn package -DskipTests
-$ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyBackEnd-0.0.1-SNAPSHOT.jar
-$ java -jar ShopifyWebParent/ShopifyFrontEnd/target/ShopifyFrontEnd-0.0.1-SNAPSHOT.jar
-$ java -jar target/SBtemplate-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+$ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyBackEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
 ```
 
-Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
+#### Running the ShopifyFrontEnd application with Maven :
+
+ ```shell
+$ git clone https://github.com/nir-programmer/shopify-project.git
+$ cd shopify-project
+$ mvn package -DskipTests
+$ java -jar ShopifyWebParent/ShopifyFrontEnd/target/ShopifyBackEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+```
+
+
+Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
 Run the ShopifyBackEnd project :
 
@@ -81,21 +91,51 @@ $ mvn spring-boot:run
 ```
 
 
-### Building and Running the application WITHOUT Maven installed on your local machine by using the mvnw file: 
+### Running the applications without Maven
 
-The code can also be built into a jar and then executed/run. Once the jar is built, run the jar by double clicking on it or by using the command.\
+<!-- The code can also be built into a jar and then executed/run. Once the jar is built, run the jar by double clicking on it or by using the command.\ -->
 
-If you don't have Maven installed on your local machine you can still build and run the 2 projects by using the mvnw file by the following commands: 
+If you don't have Maven installed on your local machine you can still build and run the 2 applications by using the .mvnw file
+
+#### Running the ShopifyBackEnd application without Maven
 
 ```shell
 $ git clone https://github.com/nir-programmer/shopify-project.git
 $ cd shopify-project
 $ ./mvnw package -DskipTests
-$ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyBackEnd-0.0.1-SNAPSHOT.jar
-$ java -jar ShopifyWebParent/ShopifyFrontEnd/target/ShopifyFrontEnd-0.0.1-SNAPSHOT.jar
-$ java -jar target/SBtemplate-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+$ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyBackEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
 ```
 
+#### Running the ShopifyFrontEnd application without Maven
+
+```shell
+$ git clone https://github.com/nir-programmer/shopify-project.git
+$ cd shopify-project
+$ ./mvnw package -DskipTests
+$ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyFrontEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+```
+
+### Running the application with Executable JAR
+
+The code can also be built into a jar and then executed/run. Once the jar is built, run the jar by double clicking on it or by using the command.
+
+#### Running the ShopifyBackEnd application with Executable JAR
+
+```shell
+$ git clone https://github.com/nir-programmer/shopify-project.git
+$ cd shopify-project
+$ mvn package -DskipTests
+$ java -jar ShopifyWebParent/ShopifyBackEnd/target/ShopifyBackEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+```
+
+#### Running the ShopifyFrontEnd application with Executable JAR
+
+```shell
+$ git clone https://github.com/nir-programmer/shopify-project.git
+$ cd shopify-project
+$ mvn package -DskipTests
+$ java -jar ShopifyWebParent/ShopifyFrontEnd/target/ShopifyFrontEnd-0.0.1-SNAPSHOT.jar --spring.profiles.active=test
+```
 
 
 To shutdown the jar, follow the below mentioned steps:
@@ -113,7 +153,7 @@ On a Unix Machine:(Tested on Ubuntu 20)
 
 
 
-##### Accessing Data in H2 Database
+<!-- ##### Accessing Data in H2 Database
 
 ###### H2 Console
 
@@ -134,4 +174,4 @@ Fill the login form as follows and click on Connect:
 
 #### Running the application via docker container
 
-* 	Refer to [DOCKER.md](./DOCKER.md) for details.
+* 	Refer to [DOCKER.md](./DOCKER.md) for details. -->

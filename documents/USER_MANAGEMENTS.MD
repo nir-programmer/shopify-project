@@ -1,7 +1,15 @@
 <!-- TABLE OF CONTENTS -->
 ## User Management Module: Table of Contents
 
-<details open="open">
+- Manage admin users
+- Manage categories
+- Manage books
+- Manage customers
+- Manage reviews (but cannot write reviews)
+- Manage orders (but cannot create orders)
+- View statistical infor
+
+<!-- <details open="open">
    <ul>
       <li><a href="#eer-diagram">EER Diagram</a></li>
       <li>
@@ -12,7 +20,7 @@
          </ul>
       </li>
    </ul>
-</details>
+</details> -->
 
 ## Details
 
