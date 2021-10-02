@@ -124,6 +124,26 @@ Alternatively - If you are not a registered customer - you can still login by us
    <br/>
    <br/>     
 
+
+<!-- APPLICATION SCREENSHOTS -->
+
+
+
+**More [Screenshots](documents/SCREENSHOTS.MD)**
+
+## Details
+
+- [Technology stack & other Open-source libraries](documents/TECHNOLOGY_STACK.MD)  
+- [Technical Functionalities and To-Do](documents/TECHNICAL_FUNCTIONALITIES.MD)  
+- [Getting Started](documents/GETTING_STARTED.MD)  
+- [Architecture](documents/ARCHITECTURE.md) 
+- [Installation](documents/INSTALLATION.MD)  
+- [Deployment](documents/DEPLOYMENT.md)  
+- [Security](documents/API.md)  
+- [Testing API](documents/TESTING.MD)  
+- [Changelog](documents/CHANGELOG.md) 
+- [Code Coverage](documents/CODE_COVERAGE.MD) 
+- [Documentation](documents/DOCUMENTATION.MD) 
    
   
 

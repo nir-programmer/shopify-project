@@ -1,12 +1,12 @@
 ## Installation
 
-*	Default active profile is **`test`**. When the application is running, **Flyway** will create the necessary tables and system data along with sample data. In the **`test`** profile, the application uses **H2** database (data in memory).
+<!-- *	Default active profile is **`dev`**. When the application is running, **Flyway** will create the necessary tables and system data along with sample data. In the **`test`** profile, the application uses **H2** database (data in memory).
 
 * 	URL to access application UI: **http://localhost:8080/sbat/index** or **https://192.168.99.102:8080/sbat/index** if **SSL** is enabled.
 
 * 	Other sample profiles like **`dev`**, **`production`**, **`qa`**, and  **`staging`** are available. Change the **spring.profiles.active** property in the **application.properties** file to any of the aforementioned profiles to use it.
 
-*	To enable or disable **SSL** support, in the **application properties** file turn **server.ssl.enabled** to **true** or **false**
+*	To enable or disable **SSL** support, in the **application properties** file turn **server.ssl.enabled** to **true** or **false** -->
 
 <details open="open">
 	<ul>
