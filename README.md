@@ -21,11 +21,31 @@
 - Manage settings
 - Manage Orders
 
+### Demonstration of the process by which the logged in customer searches for a laptop, adds to the shopping cart, places an order, and pays via paypal
+
+
+
+https://user-images.githubusercontent.com/67732785/135819879-e1a49f41-a767-4e17-b081-914c9810a345.mp4
+
+
+
+
+
 ### ShopifyFrontEndProject- Main Features:
+
+
+
+
+
+
+
+
 - Authentication and Authorization.
 - Managing their accounts.
 - Make a payment via PayPal, Credit Card or Cash.
-- Tracking their orders.	
+- Tracking their orders.
+
+
   
 	
 ## Quick Start: How to get into the 2 apps running on Heroku Cloud Platrform?
