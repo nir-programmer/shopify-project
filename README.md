@@ -25,15 +25,10 @@
 - Authentication and Authorization.
 - Managing their accounts.
 - Make a payment via PayPal, Credit Card or Cash.
-<<<<<<< HEAD
 - Tracking their orders.	
   
 	
-## Quick Start: How to get into the 2 apps running on Heroku Cloud Platrform?
-
-- Tracking their orders.
-
-
+## Quick Start - How to access the 2 running applications on the Heroku cloud platform?
 
 
 ### Access to the ShopifyFrontEndProject - Instructions
