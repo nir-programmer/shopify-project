@@ -21,7 +21,7 @@
 - Manage settings.
 - Manage Orders.
 
-### TThe following video demonstrates a number of product management related actions that an employee of a company with the role of admin can perform when using the site:
+### The following video demonstrates a number of product management related actions that an employee of a company with the role of admin can perform when using the site:
 
 1. login
 2. Show all products (including sorting, searching, and pagination)
