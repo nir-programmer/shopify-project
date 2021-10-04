@@ -38,16 +38,7 @@
   
 
 ### The following video demonstrates a number of actions a registered customer can take when using the site:
--login
--Select Search Category (Laptops)
--Choose a product and add it to the shopping cart.
-- Successful execution of an order via paypal
-- Keeps track of the status of the order
--login
--Select Search Category (Laptops)
--Choose a product and add it to the shopping cart.
-- Successful execution of an order via paypal
-- Keeps track of the status of the order
+
  1. login.
  2. Select Search Category (Laptops).
  3. Choose a product and add it to the shopping cart.
