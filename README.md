@@ -21,6 +21,15 @@
 - Manage settings
 - Manage Orders
 
+### The following video demonstrates a number of actions that an employee of a company with the role of admin can perform when using the site:
+-login
+-Show all products (including sorting, searching, and pagination)
+-Viewing product details.
+-Add new product
+- Update an existing product
+- Delete product.
+- Logout.
+
 ### ShopifyFrontEndProject- Main Features:
 - Authentication and Authorization.
 - Managing their accounts.
@@ -28,19 +37,23 @@
 - Tracking their orders.	
   
 
-### The following video demonstrates a number of actions that the customer performs:
+### The following video demonstrates a number of actions a registered customer can take when using the site:
+-login
+-Select Search Category (Laptops)
+-Choose a product and add it to the shopping cart.
+- Successful execution of an order via paypal
+- Keeps track of the status of the order
+-login
+-Select Search Category (Laptops)
+-Choose a product and add it to the shopping cart.
+- Successful execution of an order via paypal
+- Keeps track of the status of the order
  1. login.
  2. Select Search Category (Laptops).
  3. Choose a product and add it to the shopping cart.
  4. Successful execution of an order via paypal.
  5. Keeps track of the status of the order.
- 6. Logout.
- 
- 
-
-https://user-images.githubusercontent.com/67732785/135836772-bd263c5b-c4f8-4a17-b7b9-63399c558849.mp4
-
-
+ 6. Logout
 	
 ## Quick Start - How to access the 2 running applications on the Heroku cloud platform?
 
