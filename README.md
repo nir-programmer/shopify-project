@@ -85,9 +85,9 @@ Alternatively - If you are not a registered customer - you can still login by us
 <br/>
 <br/>
 
-##### Video Demo:
+#### Video Demo:
 
-A video that demonstrates the process by which the customer logs in to the app, selects a category of laptops, selects a computer, adds to the shopping cart, successfully places an order through paypal and finally checks the order status.
+The following video demonstrates the process by which the customer logs in to the app, selects a category of laptops, selects a computer, adds to the shopping cart, successfully places an order through paypal and finally checks the order status.
 
 
 
