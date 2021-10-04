@@ -34,7 +34,13 @@
  3. Choose a product and add it to the shopping cart.
  4. Successful execution of an order via paypal.
  5. Keeps track of the status of the order.
- 6. Logout
+ 6. Logout.
+ 
+ 
+
+https://user-images.githubusercontent.com/67732785/135836772-bd263c5b-c4f8-4a17-b7b9-63399c558849.mp4
+
+
 	
 ## Quick Start - How to access the 2 running applications on the Heroku cloud platform?
 
