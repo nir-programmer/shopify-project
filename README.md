@@ -82,8 +82,6 @@ Alternatively - If you are not a registered customer - you can still login by us
    <img src="documents/images/shopify-frontend/login/documents/images/shopify-frontend/login/shopify-frontend-homepage-after-login.png" width=800 height=400 />
    </center>
 
-<br/>
-<br/>
 
 #### Video Demo:
 
