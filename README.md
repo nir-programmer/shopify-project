@@ -21,18 +21,6 @@
 - Manage settings
 - Manage Orders
 
-### Demonstration of the process by which the logged in customer searches for a laptop, adds to the shopping cart, places an order, and pays via paypal
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### ShopifyFrontEndProject- Main Features:
@@ -44,11 +32,6 @@
 - Tracking their orders.
 
 
-#### Demo
-
-https://user-images.githubusercontent.com/67732785/135824913-9140879e-cc43-4eaa-942a-46d942d97ef4.mp4
-  
-	
 ## Quick Start: How to get into the 2 apps running on Heroku Cloud Platrform?
 
 ### Access to the ShopifyFrontEndProject - Instructions
@@ -101,6 +84,22 @@ Alternatively - If you are not a registered customer - you can still login by us
 
 <br/>
 <br/>
+
+##### Video Demo:
+
+A video that demonstrates the process by which the customer logs in to the app, selects a category of laptops, selects a computer, adds to the shopping cart, successfully places an order through paypal and finally checks the order status.
+
+
+
+
+
+https://user-images.githubusercontent.com/67732785/135826406-a59770af-48fa-453f-ae59-9a7cf5252fb2.mp4
+
+
+
+
+
+
 
 ### Access to the ShopifyBackEndProject - Instructions
 
