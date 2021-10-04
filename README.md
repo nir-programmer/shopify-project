@@ -45,6 +45,16 @@
  4. Successful execution of an order via paypal.
  5. Keeps track of the status of the order.
  6. Logout
+
+
+
+
+
+https://user-images.githubusercontent.com/67732785/135839246-a8ec6fc8-1ba8-48df-b8ca-824976c7be4a.mp4
+
+
+
+
 	
 ## Quick Start - How to access the 2 running applications on the Heroku cloud platform?
 
