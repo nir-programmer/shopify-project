@@ -27,6 +27,14 @@
 - Make a payment via PayPal, Credit Card or Cash.
 - Tracking their orders.	
   
+
+### The following video demonstrates a number of actions that the customer performs:
+ 1. login.
+ 2. Select Search Category (Laptops).
+ 3. Choose a product and add it to the shopping cart.
+ 4. Successful execution of an order via paypal.
+ 5. Keeps track of the status of the order.
+ 6. Logout
 	
 ## Quick Start - How to access the 2 running applications on the Heroku cloud platform?
 
