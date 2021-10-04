@@ -13,22 +13,24 @@
    
 ### ShopifyBackEnd Project- Main Features:
 - Authentication and Authorization.
-- Manage Employees and Customers Accounts
-- Manage Products
-- Manage Brands
-- Manage Categories
-- Manage Brands
-- Manage settings
-- Manage Orders
+- Manage Employees and Customers Accounts.
+- Manage Products.
+- Manage Brands.
+- Manage Categories.
+- Manage Brands.
+- Manage settings.
+- Manage Orders.
 
-### The following video demonstrates a number of actions that an employee of a company with the role of admin can perform when using the site:
--login
--Show all products (including sorting, searching, and pagination)
--Viewing product details.
--Add new product
-- Update an existing product
-- Delete product.
-- Logout.
+### TThe following video demonstrates a number of product management related actions that an employee of a company with the role of admin can perform when using the site:
+
+1. login
+2. Show all products (including sorting, searching, and pagination)
+3. Viewing product details.
+4. Update an existing product.
+5. Logout
+
+
+
 
 ### ShopifyFrontEndProject- Main Features:
 - Authentication and Authorization.
