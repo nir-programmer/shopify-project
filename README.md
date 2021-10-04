@@ -81,9 +81,12 @@ Alternatively - If you are not a registered customer - you can still login by us
 <br/>
 <br/>
 
+<hr>
+<br/>
+
 ### Access to the ShopifyBackEndProject - Instructions
 
-   Open the login page By clicking on the following link: [ShopifyBackEnd Login Page ](https://admin.shopify100.com) \
+   Open the login page By clicking on the following link: [ShopifyBackEnd Login Page ](https://admin.shopify100.com) 
    Yod will see the following page: 
    </br>
    </br>
