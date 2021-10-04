@@ -138,6 +138,11 @@ https://user-images.githubusercontent.com/67732785/135826406-a59770af-48fa-453f-
 
    <br/>
    
+   #### Video Demo:
+
+The following video demonstrates the process by which the customer logs in to the app, selects a category of laptops, selects a computer, adds to the shopping cart, successfully places an order through paypal and finally checks the order status.
+
+
 
    <br/>
    <br/>     
