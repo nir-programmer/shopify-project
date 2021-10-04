@@ -24,6 +24,10 @@
 ### Demonstration of the process by which the logged in customer searches for a laptop, adds to the shopping cart, places an order, and pays via paypal
 
 
+https://user-images.githubusercontent.com/67732785/135824913-9140879e-cc43-4eaa-942a-46d942d97ef4.mp4
+
+
+
 
 https://user-images.githubusercontent.com/67732785/135819879-e1a49f41-a767-4e17-b081-914c9810a345.mp4
 
