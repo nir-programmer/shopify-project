@@ -32,6 +32,10 @@
 
 
 
+Uploading Admin-Demo.mp4…
+
+
+
 ### ShopifyFrontEndProject- Main Features:
 - Authentication and Authorization.
 - Managing their accounts.
