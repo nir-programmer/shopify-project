@@ -15,7 +15,7 @@
 
 
 
-### ShopifyBackEnd Application - Main Features
+## ShopifyBackEnd Application - Main Features
 <!-- <details open="open">
 	<ul>
 		<li><a href="#authentication-and-authorization">Authentication and Authorization</a></li>
@@ -55,7 +55,7 @@
 
 
 
-### ShopifyFrontEnd Application- Main Features:
+## ShopifyFrontEnd Application- Main Features:
 - Authentication and Authorization.
 - Managing their accounts.
 - Make a payment via PayPal, Credit Card or Cash.
