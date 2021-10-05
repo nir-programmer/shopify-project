@@ -4,17 +4,17 @@
 # Shopify 
 
 ## Overview
-   Shopify is a complete Java Spring Boot Web application for an e-commerce company.
-   The app is used by employees and customers.
-   The project contains two main maven modules each of which is a Spring Boot Project.
-   The first project is called ShopifyBackEnd and the second one is called ShopifyFrontEnd
-   The second project is for the use of the company's employees with their various roles.
-   The second project is for the use of the company's customers.
-   
-  
+   Shopify is a complete Java Spring Boot Web application for an online e-shop.\
+   The app is used by employees and customers.\
+   The app itself contains two maven modules each of which is a separate Spring Boot Project.\
+   The first module is called ShopifyBackEnd and the second module is called ShopifyFronteEnd.
+   The 2 modules use the same database.
+
 <!---ADD LINK TO ROLES-->
 1. ShopifyBackEnd Project - used by the company employees with their various Roles.
 2. ShopifyFrontEnd Project - used by customers(and visitors) of the shop's website.
+   
+
    
 ### ShopifyBackEnd Project- Main Features:
 - Authentication and Authorization.
@@ -26,7 +26,7 @@
 - Manage settings.
 - Manage Orders.
 
-### TThe following video demonstrates a number of product management related actions that an employee of a company with the role of admin can perform when using the site:
+### The following video demonstrates a number of product management related actions that an employee of a company with the role of admin can perform when using the site:
 
 1. login
 2. Show all products (including sorting, searching, and pagination)
