@@ -13,9 +13,6 @@ When the application is running, **`Hibernate`** will create the tables and upda
 <details open="open">
 	<ul>
 		<li><a href="#running-the-applications-with-ide">Running the applications with IDE</a></li>
-		<li><a href="#running-the-applications-with-maven">Running the applications with Maven</a></li>
-		<li><a href="#running-the-applications-with-maven">Running the applications without Maven</a></li>
-		<li><a href="#running-the-application-with-executable-jar">Running the application with Executable JAR</a></li>
 		<!-- <li>
 			<ul>
 				<li>

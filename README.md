@@ -6,19 +6,37 @@
 ## Overview
    Shopify is a complete Java Spring Boot Web application for an online e-shop.\
    The app is used by employees and customers.\
-   The app itself contains two maven modules each of which is a separate Spring Boot Project.\
-   The first module is called ShopifyBackEnd and the second module is called ShopifyFronteEnd.
-   The 2 modules use the same database.
+   The app itself contains two maven modules each of which is a separate Spring Boot application.\
+   The application is called ShopifyBackEnd it is used by the employees with their various Roles. 
+   The second application is called ShopifyFronteEnd and it is used by the customers.\
+
 
 <!---ADD LINK TO ROLES-->
-1. ShopifyBackEnd Project - used by the company employees with their various Roles.
-2. ShopifyFrontEnd Project - used by customers(and visitors) of the shop's website.
-   
 
-   
-### ShopifyBackEnd Project- Main Features:
+
+
+### ShopifyBackEnd Application - Main Features
+<!-- <details open="open">
+	<ul>
+		<li><a href="#authentication-and-authorization">Authentication and Authorization</a></li>
+      <li><a href="#manage-employees-and-customers-accounts">Manage Employees and Customers Accounts</a></li>
+		<li>
+			<ul>
+				<li>
+					<a href="#accessing-data-in-h2-database">Accessing Data in H2 Database</a>
+					<ul>
+						<li><a href="#h2-console">H2 Console</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#running-the-application-via-docker-container">Running the application via docker container</a></li>
+	</ul>
+</details> -->
+
+
 - Authentication and Authorization.
-- Manage Employees and Customers Accounts.
+- Manage Employees and Customers Accounts
 - Manage Products.
 - Manage Brands.
 - Manage Categories.
