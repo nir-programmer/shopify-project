@@ -55,7 +55,7 @@
 
 
 
-### ShopifyFrontEndProject- Main Features:
+### ShopifyFrontEnd Application- Main Features:
 - Authentication and Authorization.
 - Managing their accounts.
 - Make a payment via PayPal, Credit Card or Cash.
